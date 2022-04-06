@@ -1,29 +1,19 @@
-title:            Site Title
-description:      Describe your website here.
+title:            Dr. Meow ADA Stake Pool
+description:      Dr. Meow ADA Stake Pool 야옹박사의 카르다노 에이다 스테이크풀
 disqus_shortname: 
 reading_time:     true
 words_per_minute: 200
 # Your site's domain goes here (eg: https://mmistakes.github.io, http://yourdomain.com, etc)
 # When testing locally leave blank or use http://localhost:4000
-url:
+url: https://hysleeper.github.io/meow/
 
 # Owner/author information
 owner:
-  name:           Your Name
+  name:           야옹박사
   avatar:         avatar.jpg
   bio:            "Your bio goes here. It shouldn't be super long but a good sentence or two should suffice."
-  email:          you@email.com
+  email:          hysleeper @email.com
   # Social networking links used in footer. Update and remove as you like.
-  twitter:        
-  facebook:       
-  github:         
-  stackexchange:  
-  linkedin:       
-  instagram:      
-  flickr:         
-  tumblr:         
-  # google plus id, include the '+', eg +mmistakes
-  google_plus:
 
 # Background image to be tiled on all pages
 background: 
