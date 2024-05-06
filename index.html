@@ -1,43 +1,234 @@
 <!DOCTYPE html>
-<html>
-  <head></head>
-    <body>
-      <h1><img src="15709.png" width="30" height="30">Genius Yield 한국 홍보대사 야옹박사의 Cardano 스테이킹 pool <br> 여러분의 ADA를 YABAK 에 위임해주세요. </h1>
-      하드웨어 16Gb RAM CPU 4Cores 150GB SSD, AWS에서 정전이나 멈춤없이 365일 가동
-<h4>Pool의 목표 <p>
-1. Pool 이익의 일부를 위임자들에게 카르다노 생태계 코인 에어드랍 <br>
-2. 어려운 이웃 기부 <br>
-3. 커뮤니티 정모 비용 충당 <p></h4>
-  
-Welcome to the Cardina Staking Pool, YABAK<br>
-My pool keeps providing 24/7/365 availability for the support of the Cardano Ada network and stable profits for my delegators.<br>
-Each components of the staking pool, Blockproducer and Relay Nodes, are on a separately virual server configured in AWS.<p>
+<html lang="ko">
+  <head>
+    <!-- mobile specific metas -->
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="format-detection" content="telephone=no" />
 
-YABAK Cardano 스테이킹 풀에 오신 것을 환영합니다.<br>
-카르다노 에이다 네트워크의 발전 및 위임자 분들의 안정적인 수익을 위해 스테이킹 풀의 가용성을 24시간/7일/365일 제공합니다.<br>
-스테이킹 풀은 아마존 클라우드 서버에 구축되어 있습니다. <p>
-      
-      <h2>Operator Career </h2>
-      
-전기공학 박사, 리눅스 IoT 기술 보유, 스테이킹 풀 자체 구성 및 트러블 슈팅 가능 <p>
-      
-      Ph.D Electrical Engineering <br>
+    <!-- web font -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css" />
 
-Self-organization of the pool&trouble shooting possible <p>
+    <!-- IE compatibility mode -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-Roadmap <P>
-1. 1.5M ADA delegated <br>
-2. First Block minting <br>
-3. 3.0M ADA delegated <br>
-4. 10 Block minting <br>
-5. 100 Block minting <br>
-6. Cardano project ISPO tool <br>
-      
-      
-      
-      
-      <img src="hosky.png" width="30" height="30"><img src="meld.png" width="30" height="30"><img src="wmt.png" width="30" height="30">
-      <img src="ardana.png" width="30" height="30"><img src="coti.png" width="30" height="30">
-      <p>
-      <img src="rito.png" >  야옹!!!
-    </body></html>
+    <!-- content overview -->
+    <title>Yabak : Cardano ADA Staking Pool</title>
+    <!-- <link rel="canonical" href="URL 주소"> -->
+    <meta name="description" content="Always smiling life, Linkberry Token" />
+    <meta name="keywords" content="coin, token, opportunity, earn money, blockchain" />
+
+    <!-- share : naver, kakao -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Linkberry" />
+    <meta property="og:title" content="Linkberry" />
+    <meta property="og:description" content="Always smiling life, Linkberry Token" />
+    <!-- <meta property="og:url" content="URL 주소"> -->
+    <meta property="og:image" content="images/logo/logo_share.png" />
+
+    <!-- share : twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="Linkberry" />
+    <meta name="twitter:title" content="Linkberry" />
+    <meta name="twitter:description" content="Always smiling life, Linkberry Token" />
+    <!-- <meta name="twitter:url" content="URL 주소"> -->
+    <meta name="twitter:image" content="images/logo/logo_share.png" />
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple_icon_180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="./images/favicon/android_icon_192x192.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="./images/favicon/favicon_96x96.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon_32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon_16x16.png" />
+
+    <!-- javascript & jquery -->
+    <script src="js/lib/jquery.min.js"></script>
+    <script src="js/lib/swiper-bundle.min.js"></script>
+    <script src="js/lib/Chart.bundle.js"></script>
+    <script src="js/lib/Chart.PieceLabel.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/submitSubscriptionForm.js"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+  </head>
+  <body>
+    <header>
+      <div class="inner_wrap border">
+        <h1 class="logo">
+        </h1>
+        <div class="ml_a">
+          <a class="icon menu menu_open">
+            <i></i>
+          </a>
+        </div>
+        <div class="gnb border">
+          <nav class="gnb_wrap">
+            <ul class="gnb_menu">
+              <a class="icon close menu_close">
+                <i></i>
+              </a>
+              <li>
+                <a href="index.html">HOME</a>
+              </li>
+              <li>
+                <a href="about.html">ABOUT</a>
+              </li>
+              <li>
+                <a href="https://linkberry.info">PROJECT</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="loading">
+        <div class="logo_splash">
+          <img src="images/logo/logo_splash.svg" alt="Linkberry logo" />
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="main_banner border">
+        <div class="inner_wrap">
+          <div class="image_wrap">
+            <div class="circle c1">
+              <span class="dot"></span>
+            </div>
+            <div class="circle c2">
+              <span class="dot"></span>
+            </div>
+            <div class="circle c3">
+              <span class="dot"></span>
+            </div>
+            <div class="circle c4">
+              <span class="dot"></span>
+            </div>
+            <img src="images/linkberry_coin.png" alt="Linkberry coin" />
+          </div>
+          <div class="text_wrap">
+            <h2>YABAK STAKING POOL</h2>
+            <h2>Cardano Blockchain</h2>
+          </div>
+        </div>
+      </section>
+      <section class="main_slogan border">
+        <div class="slogan_wrap">
+          <div class="slogan">
+            <p><span>YABAK</span> &nbsp;MORE ROA&nbsp;<span>YABAK</span> &nbsp;MORE REWARDS&nbsp;</p>
+          </div>
+          <div class="slogan">
+            <p><span>YABAK</span> &nbsp;MORE ROA&nbsp;<span>YABAK</span> &nbsp;MORE REWARDS&nbsp;</p>
+          </div>
+        </div>
+      </section>
+     
+      <section class="border">
+        <div class="inner_wrap">
+          <div class="text_wrap">
+            <h3>DO NOT HESITATE ASKING ME ANYTHING</h3>
+            <p>Get notified about major development updates!</p>
+          </div>
+          <form class="form" method="post" style="margin-top: 1rem">
+            <div class="input_wrap">
+              <input type="email" id="user_email" name="user_email" spellcheck="false" placeholder="Enter your Email address" />
+            </div>
+            <div class="button_wrap">
+              <button type="button" id="submit_form_button">Notify Me</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer_util_wrap">
+        <a class="scroll_top">TOP</a>
+      </div>
+      <div class="inner_wrap">
+        <div class="footer_bottom">
+          <ul class="footer_sns">
+            <li>
+              <a href="https://www.youtube.com/@yabak7" target="_blank" class="thumb">
+                <img src="images/icon/sns_youtube_white.svg" />
+              </a>
+            </li>
+          </ul>
+          <p class="copyright">ⓒ YABAK Cardano Staking Pool. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script type="text/javascript">
+    $(function () {
+      // init page
+      $(".gnb_menu li:nth-of-type(1)").addClass("active");
+    });
+
+    // Pie Chart
+    window.onload = function () {
+      pieChartDraw();
+      document.getElementById("legend_wrap").innerHTML = window.pieChart.generateLegend();
+    };
+
+    let pieChartData = {
+      labels: ["Development (3P)", "Partnership (2P)", "Team (12P)", "Treasury (12P)", "Liquidity (10P)", "ISPO (20P)", "User Distribution (41P)"],
+      datasets: [
+        {
+          data: [3, 2, 12, 12, 10, 20, 41],
+          borderWidth: 1,
+          borderColor: "#141618",
+          backgroundColor: ["#f2b872", "#f5876e", "#f35b7b", "#8e54da", "#c082ff", "#b8deab", "#6abfae", "#4fb4bf"],
+        },
+      ],
+    };
+
+    let pieChartDraw = function () {
+      let ctx = document.getElementById("pieChartCanvas").getContext("2d");
+      window.pieChart = new Chart(ctx, {
+        type: "doughnut",
+        data: pieChartData,
+        options: {
+          responsive: true,
+          tooltips: {
+            enabled: false,
+          },
+          hover: {
+            mode: null,
+          },
+          legend: {
+            display: false,
+          },
+          legendCallback: customLegend,
+          title: {
+            display: false,
+          },
+          pieceLabel: {
+            render: "percent",
+            arc: true,
+            fontFamily: "Montserrat",
+            fontSize: 15,
+            fontStyle: "bold",
+            fontColor: ["#f2b872", "#f5876e", "#f35b7b", "#8e54da", "#c082ff", "#b8deab", "#6abfae", "#4fb4bf"],
+            position: "outside",
+            precision: 1,
+          },
+        },
+      });
+    };
+
+    let customLegend = function (chart) {
+      let ul = document.createElement("ul");
+      let color = chart.data.datasets[0].backgroundColor;
+      chart.data.labels.forEach(function (label, index) {
+        ul.innerHTML += `<li><span style="background:${color[index]};"></span>${label}</li>`;
+      });
+      return ul.outerHTML;
+    };
+  </script>
+</html>
