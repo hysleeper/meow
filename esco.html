@@ -2,1123 +2,364 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Linkberry RWA ESCO NFT | Win-Win Staking Ecosystem</title>
+  <title>Linkberry ESCO – EcoMesh & SaveNet Concept</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="RWA ESCO NFT on Cardano: stablecoin-based NFT sales, DEX + Linkberry token staking, and real-world energy savings rewards in a win-win ecosystem." />
+  <meta name="description" content="Linkberry ESCO concept for Project Catalyst – factory cooling energy savings using EcoMesh and SaveNet, with a shared-savings ESCO business model and future Cardano integration." />
   <style>
-    /* ---------- Base Styles ---------- */
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    :root {
+      --bg: #050814;
+      --bg-alt: #0b1020;
+      --card: #101626;
+      --accent: #4fd1c5;
+      --accent-soft: rgba(79, 209, 197, 0.12);
+      --text: #f5f7ff;
+      --muted: #9aa2c2;
+      --border: #232b3f;
     }
 
-    :root {
-      --bg: #050816;
-      --bg-soft: #0b1020;
-      --accent: #37b7ff;
-      --accent-soft: rgba(55, 183, 255, 0.15);
-      --accent-strong: #00ffa3;
-      --text-main: #f5f5ff;
-      --text-muted: #9ca3af;
-      --border-subtle: rgba(148, 163, 184, 0.35);
-      --card-radius: 18px;
-      --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.55);
-      --container-width: 1080px;
-      --transition-fast: 0.25s ease;
-    }
+    * { box-sizing: border-box; }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        sans-serif;
-      background: radial-gradient(circle at top, #111827 0, #050816 60%, #020617 100%);
-      color: var(--text-main);
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #17224a 0, #050814 45%, #020308 100%);
+      color: var(--text);
       line-height: 1.6;
-      min-height: 100vh;
     }
 
     a {
-      color: inherit;
+      color: var(--accent);
       text-decoration: none;
     }
+    a:hover { text-decoration: underline; }
 
-    img {
-      max-width: 100%;
-      display: block;
+    header {
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(to bottom, rgba(5, 8, 20, 0.96), rgba(5, 8, 20, 0.88));
     }
 
-    .page {
-      max-width: var(--container-width);
-      margin: 0 auto;
-      padding: 24px 16px 64px;
-    }
-
-    /* ---------- Top Navigation ---------- */
     .nav {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0.75rem 1.25rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 20px;
+      gap: 1.5rem;
     }
 
-    .nav-left {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .logo-mark {
-      width: 34px;
-      height: 34px;
-      border-radius: 999px;
-      background: radial-gradient(circle, var(--accent) 0, #0ea5e9 40%, #0f172a 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 8px 25px rgba(56, 189, 248, 0.6);
-      font-size: 18px;
-      font-weight: 800;
-      color: #0b1020;
-    }
-
-    .logo-text-main {
-      font-size: 18px;
+    .nav-brand {
       font-weight: 700;
-      letter-spacing: 0.02em;
-    }
-
-    .logo-text-sub {
-      font-size: 11px;
-      color: var(--text-muted);
+      font-size: 0.98rem;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      letter-spacing: 0.14em;
+      color: var(--muted);
     }
+    .nav-brand span { color: var(--accent); }
 
     .nav-links {
       display: flex;
-      gap: 18px;
-      font-size: 13px;
-      color: var(--text-muted);
+      gap: 1rem;
+      font-size: 0.9rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .nav-links a {
+      padding: 0.15rem 0.4rem;
+      border-radius: 999px;
+      color: var(--muted);
+    }
+    .nav-links a:hover {
+      background: var(--accent-soft);
+      color: var(--text);
+      text-decoration: none;
     }
 
-    .nav-link {
-      position: relative;
-      cursor: pointer;
+    main {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 3rem;
     }
 
-    .nav-link::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -4px;
-      width: 0;
-      height: 2px;
-      background: linear-gradient(90deg, var(--accent), var(--accent-strong));
-      transition: width var(--transition-fast);
-    }
-
-    .nav-link:hover::after {
-      width: 100%;
-    }
-
-    /* ---------- Hero Section ---------- */
     .hero {
-      margin-top: 20px;
       display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2.2fr);
-      gap: 32px;
+      grid-template-columns: minmax(0, 1.9fr) minmax(0, 1.4fr);
+      gap: 2rem;
       align-items: center;
+      margin-bottom: 3rem;
+    }
+    @media (max-width: 800px) {
+      .hero { grid-template-columns: 1fr; }
     }
 
-    .hero-heading {
-      font-size: clamp(30px, 5vw, 40px);
-      font-weight: 800;
-      letter-spacing: 0.02em;
-      margin-bottom: 10px;
-    }
-
-    .hero-gradient {
-      background: linear-gradient(120deg, #e5e7eb, #38bdf8, #a855f7);
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.8);
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      font-size: 11px;
+    .hero-kicker {
+      font-size: 0.85rem;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--text-muted);
-      margin-bottom: 14px;
-    }
-
-    .hero-badge-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: var(--accent-strong);
-      box-shadow: 0 0 12px rgba(34, 197, 94, 0.8);
-    }
-
-    .hero-subtitle {
-      color: var(--text-muted);
-      font-size: 14px;
-      max-width: 460px;
-      margin-bottom: 18px;
-    }
-
-    .hero-highlights {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 20px;
-    }
-
-    .pill {
-      font-size: 11px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.85);
-      border: 1px solid rgba(148, 163, 184, 0.35);
+      letter-spacing: 0.2em;
       color: var(--accent);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      white-space: nowrap;
+      margin-bottom: 0.75rem;
     }
 
-    .pill span {
-      font-size: 9px;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      letter-spacing: 0.12em;
+    h1 {
+      font-size: clamp(2.1rem, 3vw, 2.6rem);
+      margin: 0 0 0.75rem;
     }
 
-    .hero-cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      align-items: center;
+    .hero-sub {
+      color: var(--muted);
+      font-size: 0.98rem;
+      margin-bottom: 1.2rem;
     }
 
-    .btn-primary {
-      border: none;
-      outline: none;
-      cursor: pointer;
-      border-radius: 999px;
-      padding: 10px 20px;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
-      color: #020617;
-      box-shadow: 0 14px 35px rgba(52, 211, 153, 0.5);
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: transform var(--transition-fast), box-shadow var(--transition-fast),
-        filter var(--transition-fast);
+    .hero-note {
+      color: var(--muted);
+      font-size: 0.9rem;
     }
 
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 18px 45px rgba(52, 211, 153, 0.6);
-      filter: brightness(1.05);
-    }
-
-    .btn-secondary {
-      border-radius: 999px;
-      padding: 9px 18px;
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      background: rgba(15, 23, 42, 0.9);
-      color: var(--text-muted);
-      cursor: pointer;
-      transition: background var(--transition-fast), border-color var(--transition-fast),
-        color var(--transition-fast), transform var(--transition-fast);
-    }
-
-    .btn-secondary:hover {
-      background: rgba(15, 23, 42, 1);
-      border-color: var(--accent);
-      color: var(--text-main);
-      transform: translateY(-1px);
-    }
-
-    .hero-meta {
-      font-size: 11px;
-      color: var(--text-muted);
-      margin-top: 10px;
-    }
-
-    .hero-meta strong {
-      color: var(--accent);
-      font-weight: 600;
-    }
-
-    /* ---------- Hero Right Card ---------- */
     .hero-card {
-      border-radius: 22px;
-      background: radial-gradient(circle at top left, #111827 0, #020617 55%, #000 100%);
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      box-shadow: var(--shadow-soft);
-      padding: 16px 18px 18px;
-      position: relative;
-      overflow: hidden;
+      background: radial-gradient(circle at top, #222d5c 0, #101626 40%, #050814 100%);
+      border-radius: 18px;
+      padding: 1.25rem 1.25rem 1.4rem;
+      border: 1px solid var(--border);
+      box-shadow: 0 22px 60px rgba(0, 0, 0, 0.6);
+      font-size: 0.9rem;
+    }
+    .hero-card h2 {
+      margin: 0 0 0.5rem;
+      font-size: 1.05rem;
+    }
+    .hero-card ul {
+      padding-left: 1.1rem;
+      margin: 0.3rem 0;
+      color: var(--muted);
+      font-size: 0.9rem;
     }
 
-    .hero-card-label {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: var(--text-muted);
-      margin-bottom: 4px;
+    section {
+      margin-bottom: 2.5rem;
+      padding: 1.6rem 1.4rem;
+      border-radius: 18px;
+      background: rgba(7, 11, 30, 0.92);
+      border: 1px solid var(--border);
     }
-
-    .hero-card-title {
-      font-size: 16px;
-      font-weight: 600;
-      margin-bottom: 14px;
+    section h2 {
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+      font-size: 1.25rem;
     }
+    p {
+      margin: 0.3rem 0 0.7rem;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+    ul {
+      padding-left: 1.1rem;
+      margin: 0.3rem 0 0.7rem;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+    li + li { margin-top: 0.15rem; }
 
-    .hero-card-grid {
+    .two-col {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
-      font-size: 11px;
+      gap: 1.4rem;
+    }
+    @media (max-width: 720px) {
+      .two-col { grid-template-columns: 1fr; }
     }
 
-    .metric-card {
-      background: rgba(15, 23, 42, 0.85);
-      border-radius: 14px;
-      padding: 10px 10px;
-      border: 1px solid rgba(75, 85, 99, 0.8);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .metric-label {
-      color: var(--text-muted);
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      margin-bottom: 6px;
-    }
-
-    .metric-value {
-      font-size: 16px;
-      font-weight: 700;
-    }
-
-    .metric-tag {
-      font-size: 9px;
-      color: var(--accent);
-      margin-top: 4px;
-    }
-
-    .metric-bg {
-      position: absolute;
-      inset: auto -40px 0 auto;
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(56, 189, 248, 0.22) 0, transparent 70%);
-      opacity: 0.8;
-      pointer-events: none;
-    }
-
-    .hero-card-footer {
-      margin-top: 12px;
-      font-size: 11px;
-      color: var(--text-muted);
-      border-top: 1px dashed rgba(55, 65, 81, 0.9);
-      padding-top: 10px;
-      display: flex;
-      justify-content: space-between;
-      gap: 6px;
-      flex-wrap: wrap;
-    }
-
-    .hero-card-footer span strong {
-      color: var(--accent-strong);
-    }
-
-    /* ---------- Sections ---------- */
-    .section {
-      margin-top: 40px;
-    }
-
-    .section-header {
-      margin-bottom: 16px;
-      display: flex;
-      justify-content: space-between;
-      gap: 8px;
-      align-items: flex-end;
-      flex-wrap: wrap;
-    }
-
-    .section-title {
-      font-size: 20px;
-      font-weight: 700;
-      letter-spacing: 0.03em;
-    }
-
-    .section-kicker {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: var(--text-muted);
-    }
-
-    .section-desc {
-      font-size: 13px;
-      color: var(--text-muted);
-      max-width: 520px;
-    }
-
-    /* Process cards */
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .process-card {
-      background: rgba(15, 23, 42, 0.9);
-      border-radius: var(--card-radius);
-      border: 1px solid var(--border-subtle);
-      padding: 12px 12px 14px;
-      position: relative;
-      overflow: hidden;
-      box-shadow: var(--shadow-soft);
-    }
-
-    .process-step {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--text-muted);
-      margin-bottom: 6px;
-    }
-
-    .process-title {
-      font-size: 14px;
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
-
-    .process-text {
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-
-    .process-badge {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      font-size: 10px;
-      padding: 3px 7px;
+    .badge {
+      display: inline-block;
+      padding: 0.12rem 0.55rem;
       border-radius: 999px;
       background: var(--accent-soft);
       color: var(--accent);
+      font-size: 0.78rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .item-card {
+      border-radius: 16px;
+      padding: 1rem 1.1rem;
+      background: rgba(5, 9, 24, 0.95);
+      border: 1px solid rgba(81, 110, 170, 0.8);
+    }
+    .item-card h3 {
+      margin-top: 0;
+      margin-bottom: 0.3rem;
+      font-size: 1.05rem;
+    }
+    .item-tag {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--accent);
       text-transform: uppercase;
       letter-spacing: 0.12em;
+      margin-bottom: 0.25rem;
     }
 
-    /* Equipment grid */
-    .equipment-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px;
-    }
-
-    .equipment-card {
-      background: rgba(15, 23, 42, 0.9);
-      border-radius: 18px;
-      border: 1px solid rgba(148, 163, 184, 0.5);
-      overflow: hidden;
-      box-shadow: var(--shadow-soft);
-      display: flex;
-      flex-direction: column;
-    }
-
-    .equipment-image {
-      width: 100%;
-      max-height: 220px;
-      overflow: hidden;
-      background: #020617;
-    }
-
-    .equipment-body {
-      padding: 12px 14px 14px;
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-
-    .equipment-title {
-      font-size: 15px;
-      font-weight: 600;
-      margin-bottom: 4px;
-      color: var(--text-main);
-    }
-
-    .equipment-meta {
-      font-size: 11px;
-      margin-bottom: 6px;
-      color: var(--accent);
-    }
-
-    .equipment-payback {
-      font-size: 11px;
-      margin-top: 4px;
-      color: #bbf7d0;
-    }
-
-    /* Win-Win Grid */
-    .win-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .win-card {
-      background: rgba(15, 23, 42, 0.9);
-      border-radius: var(--card-radius);
-      border: 1px solid rgba(148, 163, 184, 0.5);
-      padding: 12px 12px 14px;
-      box-shadow: var(--shadow-soft);
-      font-size: 12px;
-    }
-
-    .win-tag {
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--text-muted);
-      margin-bottom: 4px;
-    }
-
-    .win-title {
-      font-size: 13px;
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
-
-    .win-list {
-      list-style: none;
-      display: grid;
-      gap: 4px;
-      color: var(--text-muted);
-    }
-
-    .win-list li::before {
-      content: "•";
-      margin-right: 6px;
-      color: var(--accent);
-    }
-
-    /* Tokenomics / Numbers */
-    .numbers-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-      font-size: 12px;
-    }
-
-    .numbers-card {
-      background: rgba(15, 23, 42, 0.9);
-      border-radius: var(--card-radius);
-      border: 1px solid rgba(75, 85, 99, 0.9);
-      padding: 12px 12px 14px;
-      box-shadow: var(--shadow-soft);
-    }
-
-    .numbers-label {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: var(--text-muted);
-      margin-bottom: 6px;
-    }
-
-    .numbers-main {
-      font-size: 18px;
-      font-weight: 700;
-      margin-bottom: 4px;
-    }
-
-    .numbers-sub {
-      font-size: 11px;
-      color: var(--text-muted);
-      margin-bottom: 6px;
-    }
-
-    .numbers-note {
-      font-size: 11px;
-      color: var(--accent-strong);
-    }
-
-    /* Call to action */
-    .cta {
-      margin-top: 40px;
-      border-radius: 20px;
-      border: 1px solid rgba(56, 189, 248, 0.6);
-      background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.35) 0, #020617 55%, #000 100%);
-      padding: 18px 16px 20px;
-      box-shadow: var(--shadow-soft);
-      display: grid;
-      grid-template-columns: minmax(0, 3.2fr) minmax(0, 2fr);
-      gap: 16px;
-      align-items: center;
-    }
-
-    .cta-title {
-      font-size: 18px;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-
-    .cta-text {
-      font-size: 13px;
-      color: #e5e7eb;
-      margin-bottom: 12px;
-    }
-
-    .cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-    }
-
-    .cta-label {
-      font-size: 11px;
-      color: var(--text-muted);
-    }
-
-    .cta-badge {
-      font-size: 10px;
-      padding: 4px 8px;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.7);
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-    }
-
-    .cta-box {
-      justify-self: end;
-      text-align: right;
-      font-size: 11px;
-      color: var(--text-muted);
-    }
-
-    .cta-box strong {
-      color: var(--accent);
-    }
-
-    /* Footer */
-    .footer {
-      margin-top: 30px;
-      font-size: 11px;
-      color: var(--text-muted);
-      display: flex;
-      justify-content: space-between;
-      gap: 8px;
-      flex-wrap: wrap;
-      border-top: 1px solid rgba(31, 41, 55, 0.9);
-      padding-top: 12px;
-    }
-
-    .legal-badge {
-      font-size: 10px;
-      padding: 4px 7px;
-      border-radius: 999px;
-      border: 1px dashed rgba(148, 163, 184, 0.7);
-    }
-
-    /* ---------- Responsive ---------- */
-    @media (max-width: 900px) {
-      .hero {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .hero-card {
-        order: -1;
-      }
-      .process-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-      .win-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-      .numbers-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-      .equipment-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .cta {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .cta-box {
-        justify-self: start;
-        text-align: left;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .nav-links {
-        display: none;
-      }
-      .page {
-        padding-inline: 14px;
-      }
-      .process-grid,
-      .win-grid,
-      .numbers-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .hero-card {
-        padding: 14px;
-      }
-      .cta {
-        padding: 16px 14px 18px;
-      }
+    footer {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0 1.25rem 2.5rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-align: left;
     }
   </style>
 </head>
 <body>
-  <div class="page">
-    <!-- NAV -->
-    <header class="nav">
-      <div class="nav-left">
-        <div class="logo-mark">L</div>
-        <div>
-          <div class="logo-text-main">Linkberry RWA ESCO</div>
-          <div class="logo-text-sub">Cardano · NFT · Staking</div>
-        </div>
-      </div>
-      <nav class="nav-links">
-        <a href="#how-it-works" class="nav-link">How it works</a>
-        <a href="#equipment" class="nav-link">Equipment</a>
-        <a href="#win-win" class="nav-link">Win-Win Model</a>
-        <a href="#numbers" class="nav-link">Numbers</a>
-        <a href="#cta" class="nav-link">Contact</a>
-      </nav>
-    </header>
 
-    <!-- HERO -->
-    <section class="hero">
-      <div>
-        <div class="hero-badge">
-          <div class="hero-badge-dot"></div>
-          Real-World Energy · On-Chain Rewards
-        </div>
-        <h1 class="hero-heading">
-          <span class="hero-gradient">RWA ESCO NFT</span><br />
-          powered by Cardano, DEX &amp; Linkberry.
-        </h1>
-        <p class="hero-subtitle">
-          Stablecoin-based ESCO NFTs that turn real energy savings into
-          transparent on-chain rewards. Staking combines
-          <strong>RWA cashflow</strong>, <strong>DEX tokens</strong>, and
-          <strong>Linkberry tokens</strong> into a single win-win ecosystem.
-        </p>
-        <div class="hero-highlights">
-          <div class="pill"><span>RWA</span> Energy-saving ESCO projects</div>
-          <div class="pill"><span>REWARDS</span> ~12% to NFT holders</div>
-          <div class="pill"><span>STACKED</span> ESCO + DEX + Linkberry yield</div>
-        </div>
-        <div class="hero-cta-row">
-          <button class="btn-primary" onclick="document.getElementById('how-it-works').scrollIntoView({behavior:'smooth'})">
-            Explore the model →
-          </button>
-          <button class="btn-secondary" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})">
-            Partner with us
-          </button>
-        </div>
-        <div class="hero-meta">
-          Designed for <strong>DEX partners</strong>, <strong>Cardano builders</strong>, and
-          <strong>impact-driven investors</strong>.
-        </div>
-      </div>
-
-      <aside class="hero-card">
-        <div class="hero-card-label">At a glance</div>
-        <div class="hero-card-title">Balanced value for all participants.</div>
-        <div class="hero-card-grid">
-          <div class="metric-card">
-            <div class="metric-label">NFT holder rewards</div>
-            <div class="metric-value">~12%</div>
-            <div class="metric-tag">From real ESCO cashflow + yield</div>
-            <div class="metric-bg"></div>
-          </div>
-          <div class="metric-card">
-            <div class="metric-label">Company target return</div>
-            <div class="metric-value">~18%</div>
-            <div class="metric-tag">After loan interest &amp; payouts</div>
-            <div class="metric-bg"></div>
-          </div>
-          <div class="metric-card">
-            <div class="metric-label">Loan interest</div>
-            <div class="metric-value">6%</div>
-            <div class="metric-tag">Typical ESCO credit line</div>
-            <div class="metric-bg"></div>
-          </div>
-          <div class="metric-card">
-            <div class="metric-label">Extra yield layers</div>
-            <div class="metric-value">DEX + LINKE</div>
-            <div class="metric-tag">Boosted staking APR</div>
-            <div class="metric-bg"></div>
-          </div>
-        </div>
-        <div class="hero-card-footer">
-          <span>Real-world savings → <strong>on-chain rewards</strong></span>
-          <span>Stablecoins in · energy efficiency out · yield back.</span>
-        </div>
-      </aside>
-    </section>
-
-    <!-- HOW IT WORKS -->
-    <section id="how-it-works" class="section">
-      <div class="section-header">
-        <div>
-          <div class="section-kicker">Model</div>
-          <h2 class="section-title">How the RWA ESCO NFT flow works</h2>
-        </div>
-        <p class="section-desc">
-          The company signs ESCO contracts, installs energy-saving equipment using
-          bank credit, and issues NFTs that give holders a share of the verified
-          ESCO performance. No double ownership, no confusion: equipment stays on
-          the company balance sheet, rewards flow to NFT holders.
-        </p>
-      </div>
-
-      <div class="process-grid">
-        <article class="process-card">
-          <div class="process-step">Step 1</div>
-          <h3 class="process-title">ESCO contract signed</h3>
-          <p class="process-text">
-            The ESCO company signs a performance-based contract with an industrial
-            client (factory, building, etc.), committing to reduce energy
-            consumption and share savings.
-          </p>
-          <div class="process-badge">Real-world</div>
-        </article>
-
-        <article class="process-card">
-          <div class="process-step">Step 2</div>
-          <h3 class="process-title">Installation via bank credit</h3>
-          <p class="process-text">
-            The company finances equipment through unsecured credit or corporate
-            loans (e.g. 6% interest). The physical hardware remains 100% owned by
-            the ESCO company.
-          </p>
-          <div class="process-badge">No double ownership</div>
-        </article>
-
-        <article class="process-card">
-          <div class="process-step">Step 3</div>
-          <h3 class="process-title">Stablecoin-based NFT sale</h3>
-          <p class="process-text">
-            In parallel, RWA NFTs are issued and sold for stablecoins. Each NFT
-            represents the right to receive performance-based rewards from the
-            ESCO project – not legal ownership of the equipment.
-          </p>
-          <div class="process-badge">Stablecoins in</div>
-        </article>
-
-        <article class="process-card">
-          <div class="process-step">Step 4</div>
-          <h3 class="process-title">Rewards 1–2 times per year</h3>
-          <p class="process-text">
-            Based on verified annual savings, a portion of ESCO profit is
-            distributed to NFT holders on chain, targeting around <strong>12% reward rate</strong>,
-            while the company maintains a healthy margin after loan interest.
-          </p>
-          <div class="process-badge">On-chain yield</div>
-        </article>
-      </div>
-    </section>
-
-    <!-- EQUIPMENT SECTION -->
-    <section id="equipment" class="section">
-      <div class="section-header">
-        <div>
-          <div class="section-kicker">Equipment</div>
-          <h2 class="section-title">Core energy-saving equipment we deploy</h2>
-        </div>
-        <p class="section-desc">
-          The ESCO projects are not abstract. They are powered by proven
-          energy-saving technologies with short payback periods in Korea.
-          Below are two key solutions used in our RWA pipeline: Ecomech and Savenet.
-        </p>
-      </div>
-
-      <div class="equipment-grid">
-        <!-- Ecomech eco_1 -->
-        <article class="equipment-card">
-          <div class="equipment-image">
-            <img src="/assets/img/eco_1.jpg" alt="Ecomech energy-saving equipment photo 1" />
-          </div>
-          <div class="equipment-body">
-            <div class="equipment-title">Ecomech – ECO series</div>
-            <div class="equipment-meta">Typical payback in Korea: <strong>within ~2 years</strong></div>
-            <p>
-              Ecomech is an ECO-type energy-saving solution designed for industrial
-              and building cooling systems. It focuses on improving chiller and
-              cooling tower efficiency by optimizing heat exchange and reducing
-              wasted energy in real operating conditions.
-            </p>
-            <p class="equipment-payback">
-              In Korea, typical case studies show a simple payback period of
-              around 2 years, depending on site conditions and energy tariffs.
-            </p>
-          </div>
-        </article>
-
-        <!-- Ecomech eco_2 -->
-        <article class="equipment-card">
-          <div class="equipment-image">
-            <img src="/assets/img/eco_2.png" alt="Ecomech energy-saving equipment photo 2" />
-          </div>
-          <div class="equipment-body">
-            <div class="equipment-title">Ecomech – field installation</div>
-            <div class="equipment-meta">Payback in Korea: <strong>~2 years</strong> (typical)</div>
-            <p>
-              This installation view of Ecomech shows how the ECO equipment is
-              integrated into existing cooling infrastructure with minimal
-              disruption. It is suitable for retrofits where quick payback and
-              operational stability are critical for factory managers.
-            </p>
-            <p class="equipment-payback">
-              Ecomech projects are typically selected when the client requires
-              short payback and measurable CO₂ reduction from cooling optimization.
-            </p>
-          </div>
-        </article>
-
-        <!-- Savenet super_1 -->
-        <article class="equipment-card">
-          <div class="equipment-image">
-            <img src="/assets/img/super_1.png" alt="Savenet energy-saving equipment photo 1" />
-          </div>
-          <div class="equipment-body">
-            <div class="equipment-title">Savenet – SUPER series</div>
-            <div class="equipment-meta">Typical payback in Korea: <strong>within ~3 years</strong></div>
-            <p>
-              Savenet (SUPER series) is a more advanced energy-saving system that
-              targets deeper reductions in power consumption for cooling and HVAC
-              systems. It often combines control optimization with improved heat
-              rejection and hardware-level enhancements.
-            </p>
-            <p class="equipment-payback">
-              In Korean industrial sites, Savenet projects generally show a simple
-              payback of around 3 years, with significant long-term savings over
-              the full equipment lifetime.
-            </p>
-          </div>
-        </article>
-
-        <!-- Savenet super_2 -->
-        <article class="equipment-card">
-          <div class="equipment-image">
-            <img src="/assets/img/super_2.png" alt="Savenet energy-saving equipment photo 2" />
-          </div>
-          <div class="equipment-body">
-            <div class="equipment-title">Savenet – installed system</div>
-            <div class="equipment-meta">Payback in Korea: <strong>~3 years</strong> (typical)</div>
-            <p>
-              This Savenet installation demonstrates how the SUPER system is
-              implemented on site, often as part of a broader ESCO package. It is
-              well-suited for clients aiming at both energy cost reduction and
-              long-term resilience of critical cooling assets.
-            </p>
-            <p class="equipment-payback">
-              Savenet is usually proposed when the client can accept a slightly
-              longer payback in exchange for deeper, more durable savings.
-            </p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- WIN WIN SECTION -->
-    <section id="win-win" class="section">
-      <div class="section-header">
-        <div>
-          <div class="section-kicker">Ecosystem</div>
-          <h2 class="section-title">A 4-way win-win design</h2>
-        </div>
-        <p class="section-desc">
-          Staking conditions combine RWA NFTs, DEX tokens and Linkberry tokens.
-          DEX partners grow TVL, Linkberry deepens utility, NFT holders earn
-          multiple yield layers, and the ESCO business scales faster with more
-          predictable cashflow.
-        </p>
-      </div>
-
-      <div class="win-grid">
-        <article class="win-card">
-          <div class="win-tag">DEX partners</div>
-          <h3 class="win-title">More TVL, more volume</h3>
-          <ul class="win-list">
-            <li>NFT staking requires a minimum amount of DEX tokens.</li>
-            <li>Higher TVL and deeper liquidity on partner DEX.</li>
-            <li>Extra trading volume from RWA-driven users.</li>
-            <li>New narrative: “Real-World Energy Yield Pool”.</li>
-          </ul>
-        </article>
-
-        <article class="win-card">
-          <div class="win-tag">Linkberry</div>
-          <h3 class="win-title">Real utility for LINKE</h3>
-          <ul class="win-list">
-            <li>Staking condition includes a minimum LINKE balance.</li>
-            <li>Lock-in and long-term demand for Linkberry token.</li>
-            <li>Brand connected directly to measurable energy impact.</li>
-            <li>Cross-promotion with Cardano DeFi and RWA builders.</li>
-          </ul>
-        </article>
-
-        <article class="win-card">
-          <div class="win-tag">NFT holders</div>
-          <h3 class="win-title">Layered yield, lower noise</h3>
-          <ul class="win-list">
-            <li>Target ~12% rewards from real ESCO cashflow.</li>
-            <li>Additional APR from DEX staking incentives.</li>
-            <li>Extra yield from Linkberry ecosystem rewards.</li>
-            <li>No “pure speculation only” – backed by energy savings.</li>
-          </ul>
-        </article>
-
-        <article class="win-card">
-          <div class="win-tag">ESCO company</div>
-          <h3 class="win-title">Scalable & sustainable</h3>
-          <ul class="win-list">
-            <li>Uses bank credit for installation, keeping asset ownership.</li>
-            <li>Targets ~18% company-side return after 6% interest.</li>
-            <li>Additional upside from stablecoin NFT proceeds.</li>
-            <li>Cardano-native RWA reputation for future expansions.</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <!-- NUMBERS -->
-    <section id="numbers" class="section">
-      <div class="section-header">
-        <div>
-          <div class="section-kicker">Economics</div>
-          <h2 class="section-title">Simple, transparent numbers</h2>
-        </div>
-        <p class="section-desc">
-          The model is intentionally conservative: bank interest around 6%,
-          ESCO projects targeting 18% or more, NFT holders receiving ~12%,
-          and the company securing a solid margin while keeping operational
-          risk on its own balance sheet – not on retail users.
-        </p>
-      </div>
-
-      <div class="numbers-grid">
-        <article class="numbers-card">
-          <div class="numbers-label">ESCO project</div>
-          <div class="numbers-main">18% gross</div>
-          <div class="numbers-sub">
-            Typical ESCO performance target. After paying 6% loan interest,
-            around 12% margin is available for the company and reward pool.
-          </div>
-          <div class="numbers-note">
-            Real-world savings verified by contract and meter data.
-          </div>
-        </article>
-
-        <article class="numbers-card">
-          <div class="numbers-label">NFT holder rewards</div>
-          <div class="numbers-main">~12%</div>
-          <div class="numbers-sub">
-            NFT holders receive performance-based rewards 1–2 times per year in
-            stablecoins, sourced from verified ESCO profit and yield on NFT
-            proceeds.
-          </div>
-          <div class="numbers-note">
-            No ownership of hardware – only rights to rewards.
-          </div>
-        </article>
-
-        <article class="numbers-card">
-          <div class="numbers-label">Company & ecosystem</div>
-          <div class="numbers-main">~18%+</div>
-          <div class="numbers-sub">
-            After interest and NFT payouts, the company keeps a sustainable
-            return, while DEX and Linkberry gain long-term TVL and token demand
-            through staking conditions.
-          </div>
-          <div class="numbers-note">
-            A balanced outcome for builders, partners and users.
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section id="cta" class="cta">
-      <div>
-        <h2 class="cta-title">Let’s build the next wave of Cardano RWA together.</h2>
-        <p class="cta-text">
-          We are preparing a Catalyst Fund15 proposal and partnerships with
-          leading Cardano DEXs to launch the first ESCO-backed RWA NFT with
-          integrated staking for DEX and Linkberry tokens.
-        </p>
-        <div class="cta-row">
-          <button class="btn-primary">
-            Contact for collaboration
-          </button>
-          <span class="cta-label">
-            Ideal partners: Cardano DEX teams, ESCO investors, RWA builders.
-          </span>
-        </div>
-      </div>
-      <div class="cta-box">
-        <div class="cta-badge">Legal clarity</div>
-        <p style="margin-top:6px;">
-          Each NFT represents a right to receive<br />
-          <strong>performance-based rewards</strong> from the ESCO project.<br />
-          It does <strong>not</strong> grant ownership of the physical equipment
-          or any legal claim on the company’s assets.
-        </p>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div>© Linkberry · RWA ESCO NFT &amp; Staking Concept</div>
-      <div class="legal-badge">
-        This page is for concept &amp; discussion only, not financial advice.
-      </div>
-    </footer>
+<header>
+  <div class="nav">
+    <div class="nav-brand">
+      Linkberry · <span>ESCO Concept</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#purpose">Purpose</a>
+      <a href="#model">Business Model</a>
+      <a href="#items">EcoMesh &amp; SaveNet</a>
+    </nav>
   </div>
+</header>
 
-  <script>
-    // Optional: enable smooth scrolling for old browsers when clicking anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
-      anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-        var target = document.querySelector(this.getAttribute("href"));
-        if (target) {
-          target.scrollIntoView({ behavior: "smooth" });
-        }
-      });
-    });
-  </script>
+<main>
+  <!-- HERO -->
+  <section class="hero" id="purpose">
+    <div>
+      <div class="hero-kicker">Factory Cooling · ESCO</div>
+      <h1>Linkberry ESCO with EcoMesh &amp; SaveNet</h1>
+      <p class="hero-sub">
+        A focused ESCO concept to propose to Project Catalyst: reduce cooling
+        energy in factories by combining physical shading (EcoMesh) with simple
+        monitoring and control (SaveNet), and later connect savings records to Cardano.
+      </p>
+      <p class="hero-note">
+        🇰🇷 목적: 별도 초기 투자 없이 공장 냉방 에너지 비용을 낮추고,
+        절감된 에너지 비용을 ESCO와 공장이 나누는 <strong>공유 절감(Shared-savings)</strong>
+        모델을 설계한 뒤, 장기적으로는 절감 데이터와 정산 구조를
+        Cardano 블록체인으로 확장하는 것.
+      </p>
+    </div>
+
+    <div class="hero-card">
+      <h2>What this page is for</h2>
+      <ul>
+        <li>Summarize the ESCO concept for Catalyst reviewers and partners.</li>
+        <li>Describe a clear, simple shared-savings model around cooling energy.</li>
+        <li>Show how EcoMesh + SaveNet form a practical first-step implementation.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- BUSINESS MODEL -->
+  <section id="model">
+    <h2>Business Model – Shared-Savings ESCO Structure</h2>
+    <span class="badge">Cooling energy focused · Factory use case</span>
+
+    <p>
+      The Linkberry ESCO model targets factories and large buildings that use
+      chillers and cooling towers. Many sites run with high condenser temperatures,
+      poor shading and little monitoring. By installing EcoMesh and SaveNet, we
+      lower the cooling load and verify the savings with data.
+    </p>
+
+    <div class="two-col">
+      <div>
+        <h3>1. Target customers & scope</h3>
+        <ul>
+          <li>Factories with 100–800 RT class chillers and cooling towers.</li>
+          <li>Sites suffering from high summer power bills and condenser temperatures.</li>
+          <li>Focus on outdoor shading, condenser/cooling tower inlet air, and basic control.</li>
+        </ul>
+
+        <h3>2. Contract structure</h3>
+        <ul>
+          <li>No large upfront CAPEX from the factory whenever possible.</li>
+          <li>Linkberry ESCO invests in EcoMesh + SaveNet (materials, installation, tuning).</li>
+          <li>Contract period typically 3–5 years, with an agreed sharing ratio of savings.</li>
+          <li>Minimum guaranteed saving threshold (e.g. 5%) can be negotiated.</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>3. Baseline & measurement</h3>
+        <ul>
+          <li>Establish baseline: chiller kW, chilled-water temperature, outdoor temperature,
+              cooling tower fan/pump power over a reference period.</li>
+          <li>After installation, monitor the same points with SaveNet.</li>
+          <li>Normalize data for production level and weather when necessary.</li>
+          <li>Yearly (or seasonal) saving report is created and confirmed with the client.</li>
+        </ul>
+
+        <h3>4. Revenue model & Cardano angle</h3>
+        <ul>
+          <li>Verified savings (kWh) × tariff = monetary saving.</li>
+          <li>A fixed percentage (for example 30–50%) is paid to the ESCO
+              as performance-based service fee.</li>
+          <li>In later phases, saving records and settlement proofs can be
+              stored on Cardano, enabling tokenized “energy-savings credits”
+              or RWA-style instruments based on verified ESCO performance.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ITEMS -->
+  <section id="items">
+    <h2>Key Items – EcoMesh &amp; SaveNet</h2>
+
+    <div class="two-col">
+      <div class="item-card">
+        <div class="item-tag">Item 01</div>
+        <h3>EcoMesh (made in UK) – Shading &amp; Inlet-Air Cooling Support</h3>
+        <p>
+          EcoMesh is a physical shading / evaporative support system installed
+          around condensers, cooling towers or sun-exposed walls. It reduces
+          direct solar radiation and can lower the effective inlet-air
+          temperature, helping chillers and cooling towers operate with lower
+          condensing pressure.
+        </p>
+        <ul>
+          <li>Retrofit-type installation with minimal production downtime.</li>
+          <li>Targets 5–15% reduction (Payback ROI under 3 years) in cooling energy use (site dependent).</li>
+          <li>Maintenance mainly limited to periodic cleaning and inspection.</li>
+        </ul>
+           <img src="./assets/img/eco_1.jpg" width=400, height=350>
+      </div>
+
+<div class="item-card">
+  <div class="item-tag">Item 02</div>
+  <h3>SaveNet (Materials from Japan) – Anti-Recirculation & Solar-Shielding System</h3>
+  <p>
+    SaveNet is a structural airflow-optimization system designed specifically for
+    air-conditioner outdoor units. Its primary purpose is to minimize
+    <strong>heat gain from direct sunlight</strong> and to prevent
+    <strong>hot discharge air from re-entering the outdoor unit’s intake section</strong>.
+    By blocking solar radiation and guiding airflow away from the intake zone,
+    SaveNet keeps the condenser operating at a lower and more stable temperature.
+  </p>
+  <ul>
+    <li>Reduces thermal load on outdoor units by shielding direct sunlight.</li>
+    <li>Prevents hot discharge air from circulating back into the intake area.</li>
+    <li>Improves cooling efficiency by lowering condensing pressure.</li>
+    <li>Simple retrofit installation applicable to most outdoor AC units.</li>
+    <li>Expected 5–10% reduction in AC electricity consumption (site dependent).</li>
+           <img src="./assets/img/super_1.png" width=400, height=200>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  Linkberry ESCO Concept – EcoMesh &amp; SaveNet for factory cooling energy savings.  
+  This page is a simple concept summary prepared for Project Catalyst discussions, not a legal offer or guarantee.
+</footer>
+
 </body>
 </html>
