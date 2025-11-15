@@ -1,667 +1,1124 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Linkberry - "Where charity meets opportunity."</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <link href=./css/video.css rel="stylesheet" type="text/css" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <!-- javascript & jquery -->
-    <script src="js/lib/jquery.min.js"></script>
-    <script src="js/lib/swiper-bundle.min.js"></script>
-    <script src="js/lib/jquery.selectric.js"></script>
-    <script src="js/common.js"></script>
-    <script src="js/submitAmbassadorForm.js"></script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Linkberry",
-  "url": "https://linkberry.info",
-  "logo": "https://linkberry.info/assets/img/team/linke.png",
-  "description": "Linkberry is a blockchain-based project enhancing financial inclusion.",
-  "sameAs": [
-    "https://x.com/linkberry4U",
-    "https://www.youtube.com/@Linkberry4U"
+<head>
+  <meta charset="UTF-8" />
+  <title>Linkberry RWA ESCO NFT | Win-Win Staking Ecosystem</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="RWA ESCO NFT on Cardano: stablecoin-based NFT sales, DEX + Linkberry token staking, and real-world energy savings rewards in a win-win ecosystem." />
+  <style>
+    /* ---------- Base Styles ---------- */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  ]
-}
-</script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Meta tags for SEO -->
-    <meta name="description" content="Linkberry is a blockchain-based project enhancing financial inclusion.">
-    <meta name="keywords" content="blockchain, Cardano, ADA, Linkberry, financial inclusion, cryptocurrency">
-    <meta name="author" content="Linkberry Team">
-    
-    <!-- Open Graph tags for better social media sharing -->
-    <meta property="og:title" content="Linkberry - A Blockchain Project for Financial Inclusion">
-    <meta property="og:description" content="Linkberry is a blockchain-based project enhancing financial inclusion.">
-    <meta property="og:image" content="https://linkberry.info/thumbnail.jpg">
-    <meta property="og:url" content="https://linkberry.info/assets/img/about/3.jpg">
-    <meta name="twitter:card" content="summary_large_image">
+    :root {
+      --bg: #050816;
+      --bg-soft: #0b1020;
+      --accent: #37b7ff;
+      --accent-soft: rgba(55, 183, 255, 0.15);
+      --accent-strong: #00ffa3;
+      --text-main: #f5f5ff;
+      --text-muted: #9ca3af;
+      --border-subtle: rgba(148, 163, 184, 0.35);
+      --card-radius: 18px;
+      --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.55);
+      --container-width: 1080px;
+      --transition-fast: 0.25s ease;
+    }
 
-    <!-- Favicon for better branding -->
-    <link rel="icon" type="image/png" href="favicon.png">
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: radial-gradient(circle at top, #111827 0, #050816 60%, #020617 100%);
+      color: var(--text-main);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
 
-    <!-- css -->
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand" href="#page-top"><img src="assets/img/navbar-logo.svg" alt="..." /></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars ms-1"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#services">Linkberry</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#token">Token</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#ispo">ISPO</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">App</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">History</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#social">Social</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <!-- Masthead-->
-        <header class="masthead">
-            <div class="container">
-                <div class="masthead-subheading">Welcome To Linkberry World!</div>
-                <div class="masthead-heading text-uppercase">Turning donations into lasting impact!</div>
-                <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a>
-            </div>
-        </header>
-        <!-- Services-->
-        <section class="page-section" id="services">
-            <div class="container">
-                <div class="text-center">
-                    <h5 class="section-heading text-uppercase">App Download Link : <a href="https://apps.apple.com/us/app/linkberry-touch-walk/id6736656830" target="blank">App Store</a>, <a href="https://play.google.com/store/apps/details?id=com.yabak.link_berry_app" target="blank">Google Play Store</a></h5>
-                    <h5 class="section-heading text-uppercase">App Manual : <a href="https://hysleeper.tistory.com/258" target="blank">1</a>, <a href="https://hysleeper.tistory.com/259" target="blank">2</a>, <a href="https://hysleeper.tistory.com/260" target="blank">3</a>, <a href="https://hysleeper.tistory.com/261" target="blank">4</a></h5> <br>
-                    <h2 class="section-heading text-uppercase"><a href="https://linke.kr" target="blank">Linkberry </a></h2>
-                    <h3 class="section-subheading text-muted"><b>Blockchain-Based Transparent Giving System</b> : <br><br>The Linkberry app provides impoverished individuals with tokens that can be directly exchanged for cash, and the value of these tokens can increase through the purchases made by donors.</h3>
-	<div class="row text-center">
-       	             <div class="col-md-4">
-		<div class="videoWrapper">
-   		 <iframe width="400" height="225" src="https://youtube.com/embed/i0t5RwRKkPk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-		</div>
-                        <h4 class="my-3">Linkberry for Basic Income</h4>
-                        <p class="text-muted">Linkberry for charity</p>
-             	</div>
-                    <div class="col-md-4">
-		<div class="videoWrapper">
- 		   <iframe width="400" height="225" src="https://youtube.com/embed/qLltciVdmOc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-		</div>
-                        <h4 class="my-3">Value of Linkberry Token</h4>
-                        <p class="text-muted">The value of Linkberry tokens increases as the number of Linkberry app users and viewers of the Yabak Studio YouTube channel grows. This is because a portion of the ad revenue generated from both the app and the YouTube channel will be used to buy back tokens once a month.</p>
-                    </div>
-                    <div class="col-md-4">
-<div class="videoWrapper">
-    <iframe width="400" height="225" src="https://youtube.com/embed/aHiNEyVEZ3c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-</div>
-<h4 class="my-3">Transparent Donation</h4>
-                        <p class="text-muted">Is Linkberry Legitimately Bridging The Financial Gap?</p>
-  
-</div></div><br><br>
-                <div class="row text-center">
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Self-Sustaining Economic Model</h4>
-                        <p class="text-muted">Instead of donating money directly, donors can purchase Linkberry tokens, which increases the value of the tokens, benefiting both donors and those in need. The poor receive tokens that they can either trade on exchanges or use for other purposes, making the process mutually beneficial and potentially more sustainable.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Incentivizing Value Growth</h4>
-                        <p class="text-muted">Donors’ purchases of Linkberry tokens help drive the value of the tokens up. This creates an incentive for donors to contribute because the rising value of the tokens also benefits those in need. It becomes a self-reinforcing cycle where both sides have a vested interest in the success of the platform.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Transparency</h4>
-                        <p class="text-muted">If the distribution of tokens and how they benefit the poor can be clearly tracked, it builds trust among donors. The growth of Linkberry and the increasing token value would directly correlate with the benefits received by the impoverished, encouraging more people to participate.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- token-->
-        <section class="page-section" id="token">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">LINKE Token (minted in Cardano)</h2>
-         <br><br> <img class="rounded-circle img-fluid" src="assets/img/team/linke.png" alt="Cardano-based blockchain technology powering Linkberry" /> 
-<img class="rounded-circle img-fluid" src="assets/img/about/x.png" alt="Cardano-based blockchain technology powering Linkberry" /><br><br>
-                    <h3 class="section-subheading text-muted"><a href="https://pool.pm/asset1uftgshlsz5m2vv5z9px3cnjjpclefhq5yxrlv5" target="blank">asset1uftgshlsz5m2vv5z9px3cnjjpclefhq5yxrlv5</a></h3>
-                   <h3 class="section-subheading text-muted">Ticker : <b>LINKE</b>, Total supply : <b>10,000,000,000</b>, <b><a href="https://linkberry.info/token.html" target="blank">TOKENOMICS</b></a> </h3>
-                    <h2 class="section-heading text-uppercase">How to Get the Linkberry Tokens ($LINKE)?</h2>
-                    <h2 class="section-heading text-uppercase"><a href="https://x.com/GroveXchange/status/1905784762062782556" target="blank">LINKE is finally listed in GroveX exchange on 1st April!</a></h2>
-                    <h2 class="section-heading text-uppercase"><a href="https://minswap.org/launch-bowl/1e1bb0cbedda0bdc9bde3fcaee93ba451e5b5b9b1da667c48cbf830a90145686" target="blank">LINKE is listed in Minswap on 1st April!</a></h2><br>
-                    <h3 class="section-heading text-uppercase">The points earned in Linkberry app can be exchanged in <a href="https://linke.kr" target="blank">Linke.kr</a>!</h3><br><br><br>
-<p><h4 class="section-heading text-uppercase">The value of Linkberry tokens increases through buybacks and donation token purchases using advertising revenue from the Linkberry app.</h4></p>
-</div>
-                <div class="row text-center">
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                        </span>
-                        <h4 class="my-3">Rewards for <a href="https://linke.kr" target="blank">Linkberry app </a>activities</h4>
-                        <p class="text-muted">Instead of donating money directly, donors can purchase Linkberry tokens, which increases the value of the tokens, benefiting both donors and those in need. The poor receive tokens that they can either trade on exchanges or use for other purposes, making the process mutually beneficial and potentially more sustainable. <span class="image blinking"><b>Eligibility : To exchange points earned from the Linkberry app for tokens, you must have a wallet with a minimum of 100 ADA staked in the $LIBE pool for at least 6 epochs.</b></span></p>
-                    </div>
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                        </span>
-                        <h4 class="my-3">Rewards for ADA staking</h4>
-                        <p class="text-muted">Anyone who stakes ADA in <b>$LIBE</b>, <b><a href="https://hysleeper.github.io/meow/" target="blank">$YABAK</a></b>, <a href="https://singlepoolalliance.net" target="blank"><b>CSPA</b></a> (Cardano Single Pool Alliance) and <a href="https://pool.pm/d61ab012cf4b0c24daf2447309638b25573f85b0a7e4ffdb60db9b22" target="blank">$ECP</a>, <a href="https://pool.pm/12d4d2f7a7c5b4ae10853d093257d71bd3ac6d2abccc2b65fc0bff8f" target="blank">$46S</a>, <a href="https://pool.pm/4159a9cc7339bd2c495ad83239c2f1b97c8d2097eed6b120e08948c9" target="blank">$DEGAS</a>, <a href="https://pool.pm/bb32c21c1ca7dc8f73fad1b6263987139a868fad820b3c3069fefcd6" target="blank">$HAMDA</a>, <a href="https://pool.pm/d8cc8d4198e23dbc5685c6682e6ea06e82fbd93879e42086e64ccc21" target="blank">$PET</a>, <a href="https://pool.pm/a24d65818d2aa00387f788e4d1da1cdaca138c50e9136af6cc55e68a" target="blank">$HAWAK</a> among <b><a href="https://linkberry.info/manual.html" target="blank">Linkberry Partner Pools</a></b>. Stakers can claim Rewards in <a href="https://vm.adaseal.eu" target="blank"><b>Vending machine</a></b>.Those who have staked at least 1,000 ADA in the <b>$LIBE</b> pool will receive LINKE tokens along with 1.3 ADA once every three month.</p>
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .page {
+      max-width: var(--container-width);
+      margin: 0 auto;
+      padding: 24px 16px 64px;
+    }
+
+    /* ---------- Top Navigation ---------- */
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: radial-gradient(circle, var(--accent) 0, #0ea5e9 40%, #0f172a 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 25px rgba(56, 189, 248, 0.6);
+      font-size: 18px;
+      font-weight: 800;
+      color: #0b1020;
+    }
+
+    .logo-text-main {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .logo-text-sub {
+      font-size: 11px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .nav-link {
+      position: relative;
+      cursor: pointer;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-strong));
+      transition: width var(--transition-fast);
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    /* ---------- Hero Section ---------- */
+    .hero {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.2fr);
+      gap: 32px;
+      align-items: center;
+    }
+
+    .hero-heading {
+      font-size: clamp(30px, 5vw, 40px);
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      margin-bottom: 10px;
+    }
+
+    .hero-gradient {
+      background: linear-gradient(120deg, #e5e7eb, #38bdf8, #a855f7);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .hero-badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--accent-strong);
+      box-shadow: 0 0 12px rgba(34, 197, 94, 0.8);
+    }
+
+    .hero-subtitle {
+      color: var(--text-muted);
+      font-size: 14px;
+      max-width: 460px;
+      margin-bottom: 18px;
+    }
+
+    .hero-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .pill {
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      color: var(--accent);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    .pill span {
+      font-size: 9px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      letter-spacing: 0.12em;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .btn-primary {
+      border: none;
+      outline: none;
+      cursor: pointer;
+      border-radius: 999px;
+      padding: 10px 20px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      color: #020617;
+      box-shadow: 0 14px 35px rgba(52, 211, 153, 0.5);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast),
+        filter var(--transition-fast);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 45px rgba(52, 211, 153, 0.6);
+      filter: brightness(1.05);
+    }
+
+    .btn-secondary {
+      border-radius: 999px;
+      padding: 9px 18px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: background var(--transition-fast), border-color var(--transition-fast),
+        color var(--transition-fast), transform var(--transition-fast);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(15, 23, 42, 1);
+      border-color: var(--accent);
+      color: var(--text-main);
+      transform: translateY(-1px);
+    }
+
+    .hero-meta {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 10px;
+    }
+
+    .hero-meta strong {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* ---------- Hero Right Card ---------- */
+    .hero-card {
+      border-radius: 22px;
+      background: radial-gradient(circle at top left, #111827 0, #020617 55%, #000 100%);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      box-shadow: var(--shadow-soft);
+      padding: 16px 18px 18px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .hero-card-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+
+    .hero-card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      font-size: 11px;
+    }
+
+    .metric-card {
+      background: rgba(15, 23, 42, 0.85);
+      border-radius: 14px;
+      padding: 10px 10px;
+      border: 1px solid rgba(75, 85, 99, 0.8);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .metric-label {
+      color: var(--text-muted);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      margin-bottom: 6px;
+    }
+
+    .metric-value {
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .metric-tag {
+      font-size: 9px;
+      color: var(--accent);
+      margin-top: 4px;
+    }
+
+    .metric-bg {
+      position: absolute;
+      inset: auto -40px 0 auto;
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.22) 0, transparent 70%);
+      opacity: 0.8;
+      pointer-events: none;
+    }
+
+    .hero-card-footer {
+      margin-top: 12px;
+      font-size: 11px;
+      color: var(--text-muted);
+      border-top: 1px dashed rgba(55, 65, 81, 0.9);
+      padding-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .hero-card-footer span strong {
+      color: var(--accent-strong);
+    }
+
+    /* ---------- Sections ---------- */
+    .section {
+      margin-top: 40px;
+    }
+
+    .section-header {
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      align-items: flex-end;
+      flex-wrap: wrap;
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    .section-kicker {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--text-muted);
+    }
+
+    .section-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      max-width: 520px;
+    }
+
+    /* Process cards */
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .process-card {
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: var(--card-radius);
+      border: 1px solid var(--border-subtle);
+      padding: 12px 12px 14px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .process-step {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .process-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .process-text {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .process-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 10px;
+      padding: 3px 7px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    /* Equipment grid */
+    .equipment-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .equipment-card {
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: 18px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .equipment-image {
+      width: 100%;
+      max-height: 220px;
+      overflow: hidden;
+      background: #020617;
+    }
+
+    .equipment-body {
+      padding: 12px 14px 14px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .equipment-title {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: var(--text-main);
+    }
+
+    .equipment-meta {
+      font-size: 11px;
+      margin-bottom: 6px;
+      color: var(--accent);
+    }
+
+    .equipment-payback {
+      font-size: 11px;
+      margin-top: 4px;
+      color: #bbf7d0;
+    }
+
+    /* Win-Win Grid */
+    .win-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .win-card {
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: var(--card-radius);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      padding: 12px 12px 14px;
+      box-shadow: var(--shadow-soft);
+      font-size: 12px;
+    }
+
+    .win-tag {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .win-title {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .win-list {
+      list-style: none;
+      display: grid;
+      gap: 4px;
+      color: var(--text-muted);
+    }
+
+    .win-list li::before {
+      content: "•";
+      margin-right: 6px;
+      color: var(--accent);
+    }
+
+    /* Tokenomics / Numbers */
+    .numbers-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      font-size: 12px;
+    }
+
+    .numbers-card {
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: var(--card-radius);
+      border: 1px solid rgba(75, 85, 99, 0.9);
+      padding: 12px 12px 14px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .numbers-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .numbers-main {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .numbers-sub {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .numbers-note {
+      font-size: 11px;
+      color: var(--accent-strong);
+    }
+
+    /* Call to action */
+    .cta {
+      margin-top: 40px;
+      border-radius: 20px;
+      border: 1px solid rgba(56, 189, 248, 0.6);
+      background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.35) 0, #020617 55%, #000 100%);
+      padding: 18px 16px 20px;
+      box-shadow: var(--shadow-soft);
+      display: grid;
+      grid-template-columns: minmax(0, 3.2fr) minmax(0, 2fr);
+      gap: 16px;
+      align-items: center;
+    }
+
+    .cta-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .cta-text {
+      font-size: 13px;
+      color: #e5e7eb;
+      margin-bottom: 12px;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .cta-label {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .cta-badge {
+      font-size: 10px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+    }
+
+    .cta-box {
+      justify-self: end;
+      text-align: right;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .cta-box strong {
+      color: var(--accent);
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 30px;
+      font-size: 11px;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: wrap;
+      border-top: 1px solid rgba(31, 41, 55, 0.9);
+      padding-top: 12px;
+    }
+
+    .legal-badge {
+      font-size: 10px;
+      padding: 4px 7px;
+      border-radius: 999px;
+      border: 1px dashed rgba(148, 163, 184, 0.7);
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .hero-card {
+        order: -1;
+      }
+      .process-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .win-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .numbers-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .equipment-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .cta {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .cta-box {
+        justify-self: start;
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav-links {
+        display: none;
+      }
+      .page {
+        padding-inline: 14px;
+      }
+      .process-grid,
+      .win-grid,
+      .numbers-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .hero-card {
+        padding: 14px;
+      }
+      .cta {
+        padding: 16px 14px 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- NAV -->
+    <header class="nav">
+      <div class="nav-left">
+        <div class="logo-mark">L</div>
+        <div>
+          <div class="logo-text-main">Linkberry RWA ESCO</div>
+          <div class="logo-text-sub">Cardano · NFT · Staking</div>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#how-it-works" class="nav-link">How it works</a>
+        <a href="#equipment" class="nav-link">Equipment</a>
+        <a href="#win-win" class="nav-link">Win-Win Model</a>
+        <a href="#numbers" class="nav-link">Numbers</a>
+        <a href="#cta" class="nav-link">Contact</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <div class="hero-badge">
+          <div class="hero-badge-dot"></div>
+          Real-World Energy · On-Chain Rewards
+        </div>
+        <h1 class="hero-heading">
+          <span class="hero-gradient">RWA ESCO NFT</span><br />
+          powered by Cardano, DEX &amp; Linkberry.
+        </h1>
+        <p class="hero-subtitle">
+          Stablecoin-based ESCO NFTs that turn real energy savings into
+          transparent on-chain rewards. Staking combines
+          <strong>RWA cashflow</strong>, <strong>DEX tokens</strong>, and
+          <strong>Linkberry tokens</strong> into a single win-win ecosystem.
+        </p>
+        <div class="hero-highlights">
+          <div class="pill"><span>RWA</span> Energy-saving ESCO projects</div>
+          <div class="pill"><span>REWARDS</span> ~12% to NFT holders</div>
+          <div class="pill"><span>STACKED</span> ESCO + DEX + Linkberry yield</div>
+        </div>
+        <div class="hero-cta-row">
+          <button class="btn-primary" onclick="document.getElementById('how-it-works').scrollIntoView({behavior:'smooth'})">
+            Explore the model →
+          </button>
+          <button class="btn-secondary" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})">
+            Partner with us
+          </button>
+        </div>
+        <div class="hero-meta">
+          Designed for <strong>DEX partners</strong>, <strong>Cardano builders</strong>, and
+          <strong>impact-driven investors</strong>.
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <div class="hero-card-label">At a glance</div>
+        <div class="hero-card-title">Balanced value for all participants.</div>
+        <div class="hero-card-grid">
+          <div class="metric-card">
+            <div class="metric-label">NFT holder rewards</div>
+            <div class="metric-value">~12%</div>
+            <div class="metric-tag">From real ESCO cashflow + yield</div>
+            <div class="metric-bg"></div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Company target return</div>
+            <div class="metric-value">~18%</div>
+            <div class="metric-tag">After loan interest &amp; payouts</div>
+            <div class="metric-bg"></div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Loan interest</div>
+            <div class="metric-value">6%</div>
+            <div class="metric-tag">Typical ESCO credit line</div>
+            <div class="metric-bg"></div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Extra yield layers</div>
+            <div class="metric-value">DEX + LINKE</div>
+            <div class="metric-tag">Boosted staking APR</div>
+            <div class="metric-bg"></div>
+          </div>
+        </div>
+        <div class="hero-card-footer">
+          <span>Real-world savings → <strong>on-chain rewards</strong></span>
+          <span>Stablecoins in · energy efficiency out · yield back.</span>
+        </div>
+      </aside>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how-it-works" class="section">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Model</div>
+          <h2 class="section-title">How the RWA ESCO NFT flow works</h2>
+        </div>
+        <p class="section-desc">
+          The company signs ESCO contracts, installs energy-saving equipment using
+          bank credit, and issues NFTs that give holders a share of the verified
+          ESCO performance. No double ownership, no confusion: equipment stays on
+          the company balance sheet, rewards flow to NFT holders.
+        </p>
+      </div>
+
+      <div class="process-grid">
+        <article class="process-card">
+          <div class="process-step">Step 1</div>
+          <h3 class="process-title">ESCO contract signed</h3>
+          <p class="process-text">
+            The ESCO company signs a performance-based contract with an industrial
+            client (factory, building, etc.), committing to reduce energy
+            consumption and share savings.
+          </p>
+          <div class="process-badge">Real-world</div>
+        </article>
+
+        <article class="process-card">
+          <div class="process-step">Step 2</div>
+          <h3 class="process-title">Installation via bank credit</h3>
+          <p class="process-text">
+            The company finances equipment through unsecured credit or corporate
+            loans (e.g. 6% interest). The physical hardware remains 100% owned by
+            the ESCO company.
+          </p>
+          <div class="process-badge">No double ownership</div>
+        </article>
+
+        <article class="process-card">
+          <div class="process-step">Step 3</div>
+          <h3 class="process-title">Stablecoin-based NFT sale</h3>
+          <p class="process-text">
+            In parallel, RWA NFTs are issued and sold for stablecoins. Each NFT
+            represents the right to receive performance-based rewards from the
+            ESCO project – not legal ownership of the equipment.
+          </p>
+          <div class="process-badge">Stablecoins in</div>
+        </article>
+
+        <article class="process-card">
+          <div class="process-step">Step 4</div>
+          <h3 class="process-title">Rewards 1–2 times per year</h3>
+          <p class="process-text">
+            Based on verified annual savings, a portion of ESCO profit is
+            distributed to NFT holders on chain, targeting around <strong>12% reward rate</strong>,
+            while the company maintains a healthy margin after loan interest.
+          </p>
+          <div class="process-badge">On-chain yield</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- EQUIPMENT SECTION -->
+    <section id="equipment" class="section">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Equipment</div>
+          <h2 class="section-title">Core energy-saving equipment we deploy</h2>
+        </div>
+        <p class="section-desc">
+          The ESCO projects are not abstract. They are powered by proven
+          energy-saving technologies with short payback periods in Korea.
+          Below are two key solutions used in our RWA pipeline: Ecomech and Savenet.
+        </p>
+      </div>
+
+      <div class="equipment-grid">
+        <!-- Ecomech eco_1 -->
+        <article class="equipment-card">
+          <div class="equipment-image">
+            <img src="/assets/img/eco_1.jpg" alt="Ecomech energy-saving equipment photo 1" />
+          </div>
+          <div class="equipment-body">
+            <div class="equipment-title">Ecomech – ECO series</div>
+            <div class="equipment-meta">Typical payback in Korea: <strong>within ~2 years</strong></div>
+            <p>
+              Ecomech is an ECO-type energy-saving solution designed for industrial
+              and building cooling systems. It focuses on improving chiller and
+              cooling tower efficiency by optimizing heat exchange and reducing
+              wasted energy in real operating conditions.
+            </p>
+            <p class="equipment-payback">
+              In Korea, typical case studies show a simple payback period of
+              around 2 years, depending on site conditions and energy tariffs.
+            </p>
+          </div>
+        </article>
+
+        <!-- Ecomech eco_2 -->
+        <article class="equipment-card">
+          <div class="equipment-image">
+            <img src="/assets/img/eco_2.png" alt="Ecomech energy-saving equipment photo 2" />
+          </div>
+          <div class="equipment-body">
+            <div class="equipment-title">Ecomech – field installation</div>
+            <div class="equipment-meta">Payback in Korea: <strong>~2 years</strong> (typical)</div>
+            <p>
+              This installation view of Ecomech shows how the ECO equipment is
+              integrated into existing cooling infrastructure with minimal
+              disruption. It is suitable for retrofits where quick payback and
+              operational stability are critical for factory managers.
+            </p>
+            <p class="equipment-payback">
+              Ecomech projects are typically selected when the client requires
+              short payback and measurable CO₂ reduction from cooling optimization.
+            </p>
+          </div>
+        </article>
+
+        <!-- Savenet super_1 -->
+        <article class="equipment-card">
+          <div class="equipment-image">
+            <img src="/assets/img/super_1.png" alt="Savenet energy-saving equipment photo 1" />
+          </div>
+          <div class="equipment-body">
+            <div class="equipment-title">Savenet – SUPER series</div>
+            <div class="equipment-meta">Typical payback in Korea: <strong>within ~3 years</strong></div>
+            <p>
+              Savenet (SUPER series) is a more advanced energy-saving system that
+              targets deeper reductions in power consumption for cooling and HVAC
+              systems. It often combines control optimization with improved heat
+              rejection and hardware-level enhancements.
+            </p>
+            <p class="equipment-payback">
+              In Korean industrial sites, Savenet projects generally show a simple
+              payback of around 3 years, with significant long-term savings over
+              the full equipment lifetime.
+            </p>
+          </div>
+        </article>
+
+        <!-- Savenet super_2 -->
+        <article class="equipment-card">
+          <div class="equipment-image">
+            <img src="/assets/img/super_2.png" alt="Savenet energy-saving equipment photo 2" />
+          </div>
+          <div class="equipment-body">
+            <div class="equipment-title">Savenet – installed system</div>
+            <div class="equipment-meta">Payback in Korea: <strong>~3 years</strong> (typical)</div>
+            <p>
+              This Savenet installation demonstrates how the SUPER system is
+              implemented on site, often as part of a broader ESCO package. It is
+              well-suited for clients aiming at both energy cost reduction and
+              long-term resilience of critical cooling assets.
+            </p>
+            <p class="equipment-payback">
+              Savenet is usually proposed when the client can accept a slightly
+              longer payback in exchange for deeper, more durable savings.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- WIN WIN SECTION -->
+    <section id="win-win" class="section">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Ecosystem</div>
+          <h2 class="section-title">A 4-way win-win design</h2>
+        </div>
+        <p class="section-desc">
+          Staking conditions combine RWA NFTs, DEX tokens and Linkberry tokens.
+          DEX partners grow TVL, Linkberry deepens utility, NFT holders earn
+          multiple yield layers, and the ESCO business scales faster with more
+          predictable cashflow.
+        </p>
+      </div>
+
+      <div class="win-grid">
+        <article class="win-card">
+          <div class="win-tag">DEX partners</div>
+          <h3 class="win-title">More TVL, more volume</h3>
+          <ul class="win-list">
+            <li>NFT staking requires a minimum amount of DEX tokens.</li>
+            <li>Higher TVL and deeper liquidity on partner DEX.</li>
+            <li>Extra trading volume from RWA-driven users.</li>
+            <li>New narrative: “Real-World Energy Yield Pool”.</li>
+          </ul>
+        </article>
+
+        <article class="win-card">
+          <div class="win-tag">Linkberry</div>
+          <h3 class="win-title">Real utility for LINKE</h3>
+          <ul class="win-list">
+            <li>Staking condition includes a minimum LINKE balance.</li>
+            <li>Lock-in and long-term demand for Linkberry token.</li>
+            <li>Brand connected directly to measurable energy impact.</li>
+            <li>Cross-promotion with Cardano DeFi and RWA builders.</li>
+          </ul>
+        </article>
+
+        <article class="win-card">
+          <div class="win-tag">NFT holders</div>
+          <h3 class="win-title">Layered yield, lower noise</h3>
+          <ul class="win-list">
+            <li>Target ~12% rewards from real ESCO cashflow.</li>
+            <li>Additional APR from DEX staking incentives.</li>
+            <li>Extra yield from Linkberry ecosystem rewards.</li>
+            <li>No “pure speculation only” – backed by energy savings.</li>
+          </ul>
+        </article>
+
+        <article class="win-card">
+          <div class="win-tag">ESCO company</div>
+          <h3 class="win-title">Scalable & sustainable</h3>
+          <ul class="win-list">
+            <li>Uses bank credit for installation, keeping asset ownership.</li>
+            <li>Targets ~18% company-side return after 6% interest.</li>
+            <li>Additional upside from stablecoin NFT proceeds.</li>
+            <li>Cardano-native RWA reputation for future expansions.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- NUMBERS -->
+    <section id="numbers" class="section">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Economics</div>
+          <h2 class="section-title">Simple, transparent numbers</h2>
+        </div>
+        <p class="section-desc">
+          The model is intentionally conservative: bank interest around 6%,
+          ESCO projects targeting 18% or more, NFT holders receiving ~12%,
+          and the company securing a solid margin while keeping operational
+          risk on its own balance sheet – not on retail users.
+        </p>
+      </div>
+
+      <div class="numbers-grid">
+        <article class="numbers-card">
+          <div class="numbers-label">ESCO project</div>
+          <div class="numbers-main">18% gross</div>
+          <div class="numbers-sub">
+            Typical ESCO performance target. After paying 6% loan interest,
+            around 12% margin is available for the company and reward pool.
+          </div>
+          <div class="numbers-note">
+            Real-world savings verified by contract and meter data.
+          </div>
+        </article>
+
+        <article class="numbers-card">
+          <div class="numbers-label">NFT holder rewards</div>
+          <div class="numbers-main">~12%</div>
+          <div class="numbers-sub">
+            NFT holders receive performance-based rewards 1–2 times per year in
+            stablecoins, sourced from verified ESCO profit and yield on NFT
+            proceeds.
+          </div>
+          <div class="numbers-note">
+            No ownership of hardware – only rights to rewards.
+          </div>
+        </article>
+
+        <article class="numbers-card">
+          <div class="numbers-label">Company & ecosystem</div>
+          <div class="numbers-main">~18%+</div>
+          <div class="numbers-sub">
+            After interest and NFT payouts, the company keeps a sustainable
+            return, while DEX and Linkberry gain long-term TVL and token demand
+            through staking conditions.
+          </div>
+          <div class="numbers-note">
+            A balanced outcome for builders, partners and users.
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta" class="cta">
+      <div>
+        <h2 class="cta-title">Let’s build the next wave of Cardano RWA together.</h2>
+        <p class="cta-text">
+          We are preparing a Catalyst Fund15 proposal and partnerships with
+          leading Cardano DEXs to launch the first ESCO-backed RWA NFT with
+          integrated staking for DEX and Linkberry tokens.
+        </p>
+        <div class="cta-row">
+          <button class="btn-primary">
+            Contact for collaboration
+          </button>
+          <span class="cta-label">
+            Ideal partners: Cardano DEX teams, ESCO investors, RWA builders.
+          </span>
+        </div>
+      </div>
+      <div class="cta-box">
+        <div class="cta-badge">Legal clarity</div>
+        <p style="margin-top:6px;">
+          Each NFT represents a right to receive<br />
+          <strong>performance-based rewards</strong> from the ESCO project.<br />
+          It does <strong>not</strong> grant ownership of the physical equipment
+          or any legal claim on the company’s assets.
+        </p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div>© Linkberry · RWA ESCO NFT &amp; Staking Concept</div>
+      <div class="legal-badge">
+        This page is for concept &amp; discussion only, not financial advice.
+      </div>
+    </footer>
   </div>
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                        </span>
-                        <h4 class="my-3">Trade in DEX & CEX</h4>
-                        <p class="text-muted">LINKE tokens can be traded in <b><a href="https://minswap.org/#features" target="blank">Miswap</a></b> with ADA and for USDT or USDC on <a href="https://www.grovex.io/register?inviteCode=EEAWTA" target="blank">GroveX</a> and others such as <a href="https://bingx.com/invite/FN5FIZ" target="blank">BingX<a/>, <a href="https://www.mexc.com/ko-KR/register?inviteCode=1Tcnb" target="blank">MEXC</a> exchanges. Points earned through Linkberry app activities can be exchanged for tokens and then cashed out on CEX. <b><a href="https://minswap.org/launch-bowl?t=upcoming" target="blank">LBE will be in Minswap in March!!</a></b></p>
-                
-  </div>
-                </div>
-            </div>
-        </section>
-        <!-- ISPO Grid-->
-        <section class="page-section bg-light" id="ispo">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">ISPO</h2>
-                    <h3 class="section-subheading text-muted">A fair, safe and revolutionary fundraising mechanism only on Cardano Blockchain </h3>
-                </div>
-                <div class="row text-center">
-                    <div class="col-md-4">
-                        <h4 class="my-3">What is ISPO?</h4>
-                        <p class="text-muted">An ISPO is a revolutionary new fundraising mechanism that is more fair, inclusive, secure. It is a unique financing tool that allows the community to support their favorite project without investing their own assets, but instead leveraging Cardano’s native reward incentive structure.A portion of the ADA rewards obtained through ISPO will be used for donations to an orphanage in Nigeria and for a program to support content creators in Kenya. Additionally, it will be used for the buyback of LINKE tokens listed on CEX exchanges.<br><br>
-<h4 class="my-3">How to participate in <be>ISPO</b>?</h4>
-- Connect with your selected Wallet (Ethernl, etc) <br>
-- Confirm you are delegating to $LIBE or $Yabak <br>
-- Sign the delegation transaction <br>
-- Enjoy Staking with Linkberry!</p>
-                    </div>
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                        </span>
-                        <h4 class="my-3">Stake in $LIBE</h4>
-                        <p class="text-muted">Anyone who stakes a minimum of 1,000 ADA in the LIBE pool will receive 0.5 LINKE tokens per ADA as a reward for each epoch. Tokens will be distributed to all $LIBE pool stakers every three months.</p>
-<iframe width="420" height="340" frameborder="0" src="https://img.cexplorer.io/w/widget.html?pool=pool1w0s8vf9qse980vulgszvusw3800d6dlc7wkusr0aqvzlz75qgqg&theme=dark"><a href="https://cexplorer.io/pool/pool1w0s8vf9qse980vulgszvusw3800d6dlc7wkusr0aqvzlz75qgqg">pool detail on cexplorer.io</a></iframe>              
- 
-                   </div>
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                        </span>
-                        <h4 class="my-3">Stake in $Yabak</h4>
-                        <p class="text-muted">Anyone who stakes a minimum of 1,000 ADA in the YABAK pool will receive 0.05 LINKE tokens per ADA as a reward for each epoch. The Stakers can claim LINKE tokens in Vending Machine.</p>
-<iframe width="420" height="340" frameborder="0" src="https://img.cexplorer.io/w/widget.html?pool=pool1d42r0zln3kvvc54w4945735gnrm635as8hj8zy38tjprw2l49rd&theme=dark"><a href="https://cexplorer.io/pool/pool1d42r0zln3kvvc54w4945735gnrm635as8hj8zy38tjprw2l49rd">pool detail on cexplorer.io</a></iframe>
 
-                    </div>
-                </div>                
-
-            </div>
-        </section>
-        <!-- Portfolio Grid-->
-        <section class="page-section bg-light" id="portfolio">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Linkberry App : Touch & Walk</h2>
-                    <h5 class="section-subheading text-muted">App Download Link : <a href="https://apps.apple.com/us/app/linkberry-touch-walk/id6736656830" target="blank">App Store</a>, <a href="https://play.google.com/store/apps/details?id=com.yabak.link_berry_app" target="blank">Google Play Store</a></h5>
-                    <h5 class="section-subheading text-muted">+2,100 users have installed the app!</h5>
-                    <h3 class="section-subheading text-muted">Walk to Earn, Tap to Earn and View to Earn!</h3>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- Portfolio item 1-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="assets/img/portfolio/1.jpg" alt="Cardano-based blockchain technology powering Linkberry" />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading"><a href="https://linkberry.info/manual.html" target="blank">Bonus System</a></div>
-                                <div class="portfolio-caption-subheading text-muted">Stake ADA in LIBE and partner pools</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- Portfolio item 2-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="assets/img/portfolio/2.jpg" alt="Cardano-based blockchain technology powering Linkberry" />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Digital Coupons</div>
-                                <div class="portfolio-caption-subheading text-muted">Get digital coupons from various countries</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- Portfolio item 3-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="assets/img/portfolio/3.jpg" alt="Cardano-based blockchain technology powering Linkberry" />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Business Opportunities</div>
-                                <div class="portfolio-caption-subheading text-muted">Providing various business opportunities to Linke token holders.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- About-->
-        <section class="page-section" id="about">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">History</h2>
-                    <h3 class="section-subheading text-muted">Empowering lives through digital value.</h3>
-                </div>
-                <ul class="timeline">
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/1.png" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>2023</h4>
-                                <h4 class="subheading">Ideation Linkberry Project</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">With the advisory support of South Korean fintech company T, we designed the Linkberry project to implement international charitable initiatives on the Cardano blockchain! Conducting patent and trademark registration activities in South Korea.</p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/2.jpg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>The first half of 2024</h4>
-                                <h4 class="subheading">Design of Linkberry</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">The Linkberry app is designed to provide financial assistance to people in need, particularly in developing countries. By leveraging Cardano blockchain technology, it enables transparent and efficient distribution of funds while allowing users to earn rewards through various activities. Ultimately, the app aims to empower individuals by helping them generate income and become influencers within the ecosystem.</p></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>The second half of 2024</h4>
-                                <h4 class="subheading">ISPO and Linkberry App Launching</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">The Linkberry ISPO (Initial Stake Pool Offering) is a community-driven fundraising mechanism that allows participants to support the Linkberry project by staking their ADA in designated Cardano stake pools. Instead of traditional fundraising methods, ISPO enables users to delegate their ADA without losing ownership while receiving Linkberry tokens (LINKE) as rewards.</p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/4.png" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>2025</h4>
-                                <h4 class="subheading">The official launch of project activities</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">Starting in 2025, Linkberry will focus on expanding its ecosystem, increasing user adoption, and enhancing financial aid distribution through Cardano blockchain technology. <br>
-<h3 class="section-subheading text-muted"><br><b>Scaling the ISPO & Stake Pool Rewards<br><br>
-Minting the Token <br><br>
-Growing the Global User Base through marketing campaigns<br><br>
-Establishing Strategic Partnerships with fintech and charitable organizations<br><br>
-Enhancing Financial Assistance Programs for those in need</p></h3></div></b>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/5.webp" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>Yabak Studio</h4>
-                                <h4 class="subheading">For Cardano Ecosystem</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">Linkberry offers high-quality Instagram Reels and YouTube Shorts video creation services to those who stake a certain amount of ADA in the Linkberry pool or hold a significant amount of LINKE tokens from September, 2025. <br>Cardano ecosystem projects are encouraged to consider using Yabak Studio for affordable video content creation.</div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/6.png" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>Future</h4>
-                                <h4 class="subheading">RWA DeFi Projects</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">Linkberry and <a href="https://transfund.co.kr" target="blank">Transfund</a> are planning to launch a DeFi product backed by <b>lab-grown diamonds</b> on the Cardano blockchain. This initiative aims to tokenize diamond assets, enabling users to use them as collateral for decentralized lending and financial services. By leveraging Cardano’s secure and transparent ecosystem, we seek to bring stability and innovation to the DeFi space. We are considering granting eligibility to use DeFi services related to lab-grown diamonds for users who hold a certain amount of <b>LINKE tokens</b> for a specified period. Patent registration for a DeFi business model utilizing lab-grown diamonds manufactured by <b>MPCVD</b> & <b>HPHT</b> will be in 2025. <b>Dr. Kim</b> is developing a lab-grown diamond coloring technology using radiation and heat treatment in collaboration with a university in South Korea.</div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image">
-                            <h4>
-                                Be Part
-                                <br />
-                                Of Our
-                                <br />
-                                Story!
-                            </h4>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
-<!-- Donation-->
-        <section class="page-section" id="social">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Social Activities</a></h2>
-                    <h3 class="section-subheading text-muted">Linkberry makes social contributions to improve the world we live in.</h3>
-             </div>
-                <div class="row text-center">
-                    <div class="col-md-4">
-                                <img class="img-fluid" src="assets/img/portfolio/l.png" alt="..." />
-                        <h4 class="my-3">Labtop to Jeremiah & Collins</h4>
-                        <p class="text-muted">Linkberry gifted a laptop to Jeremiah and Collins from Kenya, who dream of becoming a professional video content creators in February & March 2025.</p>
-                    </div>
-                    <div class="col-md-4">
-                                <img class="img-fluid" src="assets/img/portfolio/f.png" alt="..." />
-                        <h4 class="my-3"><a href="https://blog.naver.com/jevich7/223797423411" target="blank"><b>Promotion material for Nigeria and Kenya</a></b></h4>
-                        <p class="text-muted">We provided flyers and T-shirts to support the Linkberry promotion by the Nigerian and Kenyan ambassador in February 2025.</p>
-                    </div>
-                    <div class="col-md-4">
-		<div class="videoWrapper">
- 		   <iframe width="480" height="270" src="https://youtube.com/embed/gVgblbtnBi8" title="Promotion video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-                        </div><h4 class="my-3"><a href="https://hysleeper.github.io/meow" target="blank">Yabak Studio</a></h4>
-                        <p class="text-muted">AI-Powered Hollywood Film-Making Team of two Kenyan university students financially supported by Dr. Kim of Linkberry.</p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-          <!-- Team-->
-        <section class="page-section bg-light" id="team">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Linkberry Team & Yabak Studio</h2>
-                    <h3 class="section-subheading text-muted">Building wealth for those in need. & Where charity meets opportunity.</h3>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/1.jpg" alt="..." />
-                            <h4>Dr. Sang -You Kim</h4>
-                            <p class="text-muted">Project Leader </p>
-                            <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/yaongbaksa?igsh=MWl6NWFmeXp4dHA1bQ%3D%3D&utm_source=qr" aria-label="Sang -You Kim`s Instagram Profile" target="blank"><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/sang-you-kim-372868114?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" aria-label="Sang -You Kim`s LinkedIn Profile"  target="blank"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="https://www.youtube.com/@yabak7" aria-label="Kim`s Youtube Profile"  target="blank"><i class="fab fa-youtube"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/2.jpg" alt="..." />
-                            <h4>Jeremiah Otieno Odhiambo</h4>
-                            <p class="text-muted">Manager & Content Creator</p>
-                            <a class="btn btn-dark btn-social mx-2" href="https://x.com/CardanoAdvocate" aria-label="Jeremiah`s Twitter Profile"><i class="fab fa-twitter"  target="blank"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/tamedfits?igsh=Z203aHpqNHd0MjQy" aria-label="Jeremiah`s Instagram Profile"  target="blank"><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="https://www.youtube.com/@yabak7" aria-label="Kim`s Youtube Profile"  target="blank"><i class="fab fa-youtube"></i></a>
-                        </div>
-                    </div>
-                   <div class="col-lg-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/7.jpg" alt="..." />
-                            <h4>Collins Kipyegon Bett</h4>
-                            <p class="text-muted">Video Creator using AI</p>
-                       </div>
-                    </div>
-                   <div class="col-lg-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/4.jpeg" alt="..." />
-                            <h4>Shittu Muiz</h4>
-                            <p class="text-muted">Nigeria Ambassador</p>
-                       </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/6.jpg" alt="..." />
-                            <h4>TransLand</h4>
-                            <p class="text-muted">Financial supporter and Advisor</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Ambassadors</h2>
-                    <h4 class="section-heading text-uppercase"> </h4>
-                </div>
-                <div class="row">
-                    
-                </div>
-                <div class="row">
-                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Building wealth for those in need. & Where charity meets opportunity. Transforming generosity into real change. From token to transformation.</p></div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- Clients-->
-        <!-- Contact-->
-        <section class="page-section" id="contact">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Contact Us</h2>
-                    <h3 class="section-subheading text-muted"></h3>
-                </div>
-                <!-- * * * * * * * * * * * * * * *-->
-                <!-- * * SB Forms Contact Form * *-->
-                <!-- * * * * * * * * * * * * * * *-->
-                <!-- This form is pre-integrated with SB Forms.-->
-                <!-- To make this form functional, sign up at-->
-                <!-- https://startbootstrap.com/solution/contact-forms-->
-                <!-- to get an API token!-->
-                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                    <div class="row align-items-stretch mb-5">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <!-- Name input-->
-                                <input class="form-control" id="user_name" type="text" placeholder="Your Name *" data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-                            </div>
-                            <div class="form-group">
-                                <!-- Email address input-->
-                                <input class="form-control" id="user_email" type="email" placeholder="Your Email *" data-sb-validations="required,email" />
-                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-                            </div>
-                            <div class="form-group mb-md-0">
-                                <!-- Phone number input-->
-                                <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group form-group-textarea mb-md-0">
-                                <!-- Message input-->
-                                <textarea class="form-control" id="user_motivation" placeholder="Your Message *" data-sb-validations="required"></textarea>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Submit success message-->
-                    <!---->
-                    <!-- This is what your users will see when the form-->
-                    <!-- has successfully submitted-->
-                    <div class="d-none" id="submitSuccessMessage">
-                        <div class="text-center text-white mb-3">
-                            <div class="fw-bolder">Form submission successful!</div>
-                            To activate this form, sign up at
-                            <br />
-                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                        </div>
-                    </div>
-                    <!-- Submit error message-->
-                    <!---->
-                    <!-- This is what your users will see when there is-->
-                    <!-- an error submitting the form-->
-                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                    <!-- Submit Button-->
-                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Send Message</button></div>
-                </form>
-                
-            </div>
-        </section>
-        <!-- Footer-->
-        <footer class="footer py-4">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-start">Copyright &copy; Linkberry 2025</div>
-                    <div class="col-lg-4 my-3 my-lg-0">
-                        <a class="btn btn-dark btn-social mx-2" href="https://x.com/linkberry4u" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="https://www.youtube.com/@Linkberry4U" aria-label="youtube"><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="https://discord.com/invite/uJwM8gpysg" aria-label="discord"><i class="fab fa-discord"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="https://linktr.ee/linkberry_official" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    </div>
-                    <div class="col-lg-4 text-lg-end">
-                        <a class="link-dark text-decoration-none me-3" href="https://linkberry.tistory.com/21">Privacy Policy</a>
-                        <a class="link-dark text-decoration-none" href="https://linkberry.tistory.com/22">Privacy Policy (EU GDPR)</a>
-                    </div><br>
-Trademark registration in Korea : 4022712220000, 4022413810000, 4020240153244, 4020240145118
-                </div>
-            </div>
-        </footer>
-        <!-- Portfolio Modals-->
-        <!-- Portfolio item 1 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">Bonus System</h2>
-                                    <p class="item-intro text-muted">Stake min 100 ADA in LIBE pool</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.jpg" alt="..." />
-                                    <p>Stake 100 ADA in the LIBE pool and double the points earned in the Linkberry app.</p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Pool ID:</strong>
-                                            pool1w0s8vf9qse980vulgszvusw3800d6dlc7wkusr0aqvzlz75qgqg
-                                        </li>
-                                        <li>
-                                            <strong>Hash:</strong>
-                                            73e07624a0864a77b39f4404ce41d13bdedd37f8f3adc80dfd0305f1
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Close Project
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio item 2 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">Coupons</h2>
-                                    <p class="item-intro text-muted">Get digital coupons from various countries</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/2.jpg" alt="..." />
-                                    <p>Linkberry app users can earn points by tapping on the Linkberry app screen</p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Coupon:</strong>
-                                            Paik`s coffee, Starbucks,
-                                        </li>
-                                        <li>
-                                            <strong>Country:</strong>
-                                            Republic of Korea, Japan, UK
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Close Project
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio item 3 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">Business Opportunities</h2>
-                                    <p class="item-intro text-muted">Providing various business opportunities to Linke token holders.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/3.jpg" alt="..." />
-                                    <p>Linkberry app users can earn points by tapping on the Linkberry app screen.</p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>For Linke token holders:</strong>
-                                            Discount for purchasing Lab grown diamonds
-                                        </li>
-                                        <li>
-                                            <strong>Country:</strong>
-                                            Repulic of Korea, EU, USA
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Close Project
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    </body>
+  <script>
+    // Optional: enable smooth scrolling for old browsers when clicking anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        var target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth" });
+        }
+      });
+    });
+  </script>
+</body>
 </html>
