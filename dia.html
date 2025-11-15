@@ -1,125 +1,514 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Resume - Start Bootstrap Theme</title>
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
-        <link href=./css/video.css rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                <span class="d-block d-lg-none">Yabak Cardano Stake Pool</span>
-                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/6.png" alt="..." /></span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Feasibility</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Machine</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Projects</a></li>
-                </ul>
-            </div>
-        </nav>
-        <!-- Page Content-->
-        <div class="container-fluid p-0">
-            <!-- About-->
-            <section class="resume-section" id="about">
-                <div class="resume-section-content">
-                    <h2 class="mb-0">
-                        Lab-Grown Diamond RWA & Color-Enhancement NFT Framework on Cardano
-                        <span class="text-primary"></span>
-                    </h2>
-<br><br>
+<head>
+  <meta charset="UTF-8">
+  <title>Lab-Grown Diamond RWA & Color-Enhancement NFT Framework on Cardano</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Lab-grown diamond RWA and color-enhancement NFT framework on Cardano – research, e-beam processing, and real-world asset tokenization.">
+  <style>
+    :root {
+      --bg: #050814;
+      --bg-alt: #0b1020;
+      --card: #101626;
+      --accent: #4fd1c5;
+      --accent-soft: rgba(79, 209, 197, 0.12);
+      --text: #f5f7ff;
+      --muted: #9aa2c2;
+      --border: #232b3f;
+    }
 
-✅ Updated Team Members and Roles (Final Version)<br><br><br>
-1. <b>Sangyou Kim</b> — Project Lead & Materials Science Researcher<br>
+    * {
+      box-sizing: border-box;
+    }
 
-Bachelor’s and Master’s degrees in Nuclear Engineering, and a Ph.D. in Electrical Engineering in Hanyang University, Seoul, Korea<br>
-Specialized in radiation–matter interaction, high-temperature material processing, and semiconductor-related experimental systems.
-Leads experimental design, heat/e-beam treatment execution, dataset analysis, NFT integration, and overall project management.
-<br><br>
-2. <b>Woosang Jung</b> — Patent Attorney (KIPO Registered)<br>
-Bachelor’s degrees in Material Engineering in Hanyang University, Seoul, Korea<br>
-Experienced patent attorney specializing in semiconductor processing, materials engineering, and advanced industrial technologies.
-Responsible for drafting and filing the provisional patent for the diamond color-enhancement method, managing IP strategy, and ensuring compliance with domestic and international patent requirements.
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #17224a 0, #050814 45%, #020308 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
 
-<br><br>
-3. <b>Professor Koo Min</b> — Semiconductor Engineering, Daejeon University<br>
-Bachelor’s and Master’s degrees in Nuclear Engineering in Hanyang University, Seoul, Korea and a Ph.D. in Physics in Université Grenoble Alpes, France, Korea<br>
-Expert in semiconductor materials, lattice defects, and solid-state processing.
-Advises on experimental accuracy, scientific validation, and material characterization.
-Supports peer review of color-change results and contributes to the final research report.
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
 
-<br><br>
-4. <b>Professor Seunghwa Yoo</b> — Quantum Systems Engineering, Jeonbuk National University<br>
-Bachelor’s degrees in Nuclear Engineering in Hanyang University, Master’s and Ph.D degrees in Quantum Engineering in KAIST, Korea<br>
-(South Korea’s leading institution for beam-based material engineering)
-Specialized in electron-beam processing, quantum-scale defect control, and advanced material transformation techniques.
-Advises on e-beam treatment methodology, helps interpret irradiation results, and ensures scientific rigor in the enhancement process.
-Provides expert oversight on electron-beam dose modeling and defect-engineering mechanisms.
+    header {
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(to bottom, rgba(5, 8, 20, 0.96), rgba(5, 8, 20, 0.88));
+    }
 
-<br><br>
+    .nav {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
 
-            <hr class="m-0" />
-            <!-- Experience-->
-            <section class="resume-section" id="experience">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Feasibility</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <div class="subheading mb-3">Team building</div>
-                            <p>Value Enhancement and Advanced Industrial Application Research for Diamonds</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">- October 2025</span></div></div>
-                        <div class="flex-grow-1">
-                            <div class="subheading mb-3">Color-Transformation Research on Industrial Diamonds</div>
-                            <p>Color-transformation research on industrial diamonds is important because it upgrades low-value diamonds into higher-value colored stones through controlled treatment. It also provides essential data on how diamond defects and color centers behave, supporting future applications in jewelry, electronics, sensors, and other advanced industries.</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">November 2025 - December 2025</span></div>
-<p><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/s1.jpg" width="400" height="300" alt="..." /></p><br><br>
-                    </div>
-             </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Education-->
-            <section class="resume-section" id="education">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Machines</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <div class="subheading mb-3">Electron Beam (~10 MeV)</div>
-                            <div>Advanced Radiation Research Institute, Jeongeup (Korea Atomic Energy Research Institute)
-</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Skills-->
-            <section class="resume-section" id="skills">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Projects</h2>
-                    <div class="subheading mb-3"> Research on Value Enhancement of Gem-Quality Diamonds and Application Development of Industrial Diamonds</div>
-                    <ul class="fa-ul mb-0">
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            <b>TransDia</b> : Planning various DeFi products utilizing lab-grown diamonds with <a href="https://transfund.co.kr/" target="blank">TransFund, ltd</a> & Defi companies in Europe.
-<p>Research on diamond synthesis through MPCVD and color alteration technology using radiation. </p>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!--Portfolio-->
+    .nav-brand {
+      font-weight: 700;
+      font-size: 0.98rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .nav-brand span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.9rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-links a {
+      padding: 0.15rem 0.4rem;
+      border-radius: 999px;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      background: var(--accent-soft);
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    main {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 3rem;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.4fr);
+      gap: 2rem;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+
+    @media (max-width: 800px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .hero-kicker {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    h1 {
+      font-size: clamp(2.1rem, 3vw, 2.6rem);
+      margin: 0 0 0.75rem;
+    }
+
+    .hero-sub {
+      color: var(--muted);
+      font-size: 0.98rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .tag {
+      border-radius: 999px;
+      padding: 0.15rem 0.7rem;
+      border: 1px solid var(--accent-soft);
+      font-size: 0.8rem;
+      color: var(--muted);
+      background: rgba(6, 10, 30, 0.8);
+    }
+
+    .hero-highlight {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .hero-card {
+      background: radial-gradient(circle at top, #222d5c 0, #101626 40%, #050814 100%);
+      border-radius: 18px;
+      padding: 1.25rem 1.25rem 1.4rem;
+      border: 1px solid var(--border);
+      box-shadow: 0 22px 60px rgba(0, 0, 0, 0.6);
+      font-size: 0.9rem;
+    }
+
+    .hero-card h2 {
+      margin: 0 0 0.5rem;
+      font-size: 1rem;
+    }
+
+    .hero-metrics {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.9rem;
+      margin-top: 0.9rem;
+    }
+
+    .metric {
+      padding: 0.7rem 0.75rem;
+      border-radius: 12px;
+      background: rgba(4, 8, 26, 0.9);
+      border: 1px solid rgba(58, 74, 130, 0.7);
+    }
+
+    .metric-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-bottom: 0.2rem;
+    }
+
+    .metric-value {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+      padding: 1.6rem 1.4rem;
+      border-radius: 18px;
+      background: rgba(7, 11, 30, 0.92);
+      border: 1px solid var(--border);
+    }
+
+    section h2 {
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+      font-size: 1.25rem;
+    }
+
+    section h3 {
+      margin-top: 1.4rem;
+      margin-bottom: 0.3rem;
+      font-size: 1.02rem;
+    }
+
+    p {
+      margin: 0.3rem 0 0.6rem;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    ul {
+      padding-left: 1.1rem;
+      margin: 0.3rem 0 0.7rem;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    li + li {
+      margin-top: 0.15rem;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.4rem;
+    }
+
+    @media (max-width: 720px) {
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.12rem 0.55rem;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.78rem;
+      margin-bottom: 0.4rem;
+    }
+
+    footer {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0 1.25rem 2.5rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="nav-brand">
+      Linkberry · <span>Diamond RWA</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#concept">Concept</a>
+      <a href="#flow">How it works</a>
+      <a href="#research">Research plan</a>
+      <a href="#machines">Machines</a>
+      <a href="#projects">Applications</a>
+      <a href="#team">Team</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" id="concept">
+    <div>
+      <div class="hero-kicker">Real-World Diamonds · On-Chain Value</div>
+      <h1>Lab-Grown Diamond RWA & Color-Enhancement NFT Framework on Cardano</h1>
+      <p class="hero-sub">
+        We explore how low-value lab-grown and industrial diamonds can be upgraded through
+        heat and electron-beam color treatment, professionally certified, and minted as
+        Cardano NFTs – building a science-backed diamond RWA model.
+      </p>
+
+      <div class="hero-tags">
+        <span class="tag">Lab-grown diamond</span>
+        <span class="tag">Color enhancement</span>
+        <span class="tag">Electron beam</span>
+        <span class="tag">Cardano NFT · RWA</span>
+      </div>
+
+      <p class="hero-highlight">
+        Problem: lab-grown diamonds lose value every year.<br>
+        Our research focuses on value <strong>creation</strong> through controlled post-processing
+        and transparent on-chain representation.
+      </p>
+    </div>
+
+    <div class="hero-card">
+      <h2>Prototype snapshot</h2>
+      <p>
+        Initial study: 20 lab-grown or industrial diamonds (≈1 ct range) are treated,
+        analyzed, and selectively certified. Successful samples are linked to NFTs
+        on Cardano with full scientific records.
+      </p>
+      <div class="hero-metrics">
+        <div class="metric">
+          <div class="metric-label">Samples</div>
+          <div class="metric-value">20+</div>
+          <div class="metric-note">LGD / industrial</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">Target</div>
+          <div class="metric-value">Color</div>
+          <div class="metric-note">higher value stones</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">On-chain</div>
+          <div class="metric-value">NFTs</div>
+          <div class="metric-note">Cardano RWA</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">IP</div>
+          <div class="metric-value">Patent</div>
+          <div class="metric-note">provisional filing</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLOW -->
+  <section id="flow">
+    <h2>How the diamond RWA flow works</h2>
+
+    <div class="two-col">
+      <div>
+        <h3>Step 1 · Acquire low-value diamonds</h3>
+        <p>
+          We start from low-grade lab-grown or industrial diamonds whose market value
+          is limited and tends to decline due to oversupply. Each sample receives a
+          unique ID and baseline measurements (color, clarity, size).
+        </p>
+
+        <h3>Step 2 · Heat treatment</h3>
+        <p>
+          Controlled high-temperature annealing is performed under specific atmospheres.
+          The goal is to modify defect structures and color centers without damaging
+          crystal integrity.
+        </p>
+
+        <h3>Step 3 · Electron-beam processing</h3>
+        <p>
+          Selected samples are irradiated with ≈10 MeV electron beams. This creates or
+          rearranges color centers in the diamond lattice. Dose, energy and temperature
+          profiles are logged for every stone.
+        </p>
+      </div>
+
+      <div>
+        <h3>Step 4 · Screening & certification</h3>
+        <p>
+          Stones with promising color transformation are screened and 6–8 of them are
+          sent to accredited gemological labs for professional grading and certification.
+        </p>
+
+        <h3>Step 5 · NFT minting on Cardano</h3>
+        <p>
+          Certified stones are linked to NFTs that store treatment history, grading
+          results, and high-resolution images as on-chain metadata. Optional physical
+          delivery is provided for Korean NFT holders who want to verify the stones
+          directly.
+        </p>
+
+        <h3>Step 6 · RWA framework</h3>
+        <p>
+          The outcome is not just a collection, but a reusable framework for
+          diamond-backed RWAs: from depreciating LGD to value-enhanced, science-verified,
+          on-chain assets.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH PLAN / FEASIBILITY -->
+  <section id="research">
+    <h2>Research plan & feasibility</h2>
+
+    <span class="badge">Feasibility</span>
+    <p>
+      <strong>Value Enhancement and Advanced Industrial Application Research for Diamonds</strong><br>
+      The project focuses on converting low-value diamonds into higher-value colored
+      stones through controlled treatments, while also building data for future
+      semiconductor, quantum, and sensor applications.
+    </p>
+
+    <h3>Timeline (example)</h3>
+    <ul>
+      <li><strong>October 2025</strong> – Color-transformation research on industrial diamonds.</li>
+      <li><strong>November–December 2025</strong> – Systematic experiments, data collection,
+          selection of stones for certification and NFT design.</li>
+    </ul>
+
+    <h3>Why this research matters</h3>
+    <ul>
+      <li>Upgrades low-value diamonds into higher-value colored stones.</li>
+      <li>Builds fundamental data on diamond defects and color centers.</li>
+      <li>Supports future applications in jewelry, quantum sensors, power electronics,
+          thermal management and more.</li>
+      <li>Connects physical material science with verifiable Cardano RWAs.</li>
+    </ul>
+  </section>
+
+  <!-- MACHINES -->
+  <section id="machines">
+    <h2>Machines & facilities</h2>
+
+    <h3>Electron beam (~10 MeV)</h3>
+    <p>
+      Experiments are planned using high-energy electron beam facilities such as the
+      Advanced Radiation Research Institute in Jeongeup
+      (Korea Atomic Energy Research Institute), which is capable of delivering
+      ≈10 MeV beams for material processing.
+    </p>
+
+    <p>
+      This infrastructure allows precise control of irradiation dose and temperature,
+      which is essential for defect engineering in diamond and for reproducible
+      color-enhancement research.
+    </p>
+  </section>
+
+  <!-- PROJECTS / APPLICATIONS -->
+  <section id="projects">
+    <h2>Projects & application directions</h2>
+
+    <p>
+      <strong>Research on Value Enhancement of Gem-Quality Diamonds and Application
+      Development of Industrial Diamonds</strong>
+    </p>
+
+    <ul>
+      <li>
+        <strong>TransDia & TransFund</strong> – Planning various DeFi products utilizing
+        lab-grown diamonds together with TransFund Co., Ltd. and DeFi partners in
+        Europe, building bridges between diamond RWAs and on-chain finance.
+      </li>
+      <li>
+        Research on diamond synthesis through MPCVD and color alteration technology
+        using radiation, opening pathways to diamond-based electronics, quantum devices
+        and advanced thermal solutions.
+      </li>
+    </ul>
+  </section>
+
+  <!-- TEAM -->
+  <section id="team">
+    <h2>Team</h2>
+
+    <div class="two-col">
+      <div>
+        <h3>Sangyou Kim — Project Lead & Materials Science Researcher</h3>
+        <p>
+          Bachelor’s and Master’s degrees in Nuclear Engineering, and a Ph.D. in
+          Electrical Engineering in Hanyang University, Seoul, Korea.  
+          Specialized in radiation–matter interaction, high-temperature material
+          processing, and semiconductor-related experimental systems. Leads
+          experimental design, heat/e-beam treatment execution, dataset analysis,
+          NFT integration, and overall project management.
+        </p>
+
+        <h3>Woosang Jung — Patent Attorney (KIPO Registered)</h3>
+        <p>
+          Bachelor’s degree in Materials Engineering from Hanyang University, Seoul.  
+          Experienced patent attorney specializing in semiconductor processing,
+          materials engineering, and advanced industrial technologies. Responsible
+          for drafting and filing the provisional patent for the diamond
+          color-enhancement method and managing IP strategy.
+        </p>
+      </div>
+
+      <div>
+        <h3>Professor Koo Min — Semiconductor Engineering, Daejeon University</h3>
+        <p>
+          Bachelor’s and Master’s degrees in Nuclear Engineering from Hanyang University
+          and a Ph.D. in Physics from Université Grenoble Alpes, France.  
+          Expert in semiconductor materials, lattice defects, and solid-state
+          processing. Advises on experimental accuracy, scientific validation, and
+          material characterization, and supports peer review of color-change results.
+        </p>
+
+        <h3>Professor Seunghwa Yoo — Quantum Systems Engineering, Jeonbuk National University</h3>
+        <p>
+          Bachelor’s degree in Nuclear Engineering from Hanyang University, and
+          Master’s and Ph.D. degrees in Quantum Engineering from KAIST, Korea.  
+          Specialized in electron-beam processing, quantum-scale defect control, and
+          advanced material transformation techniques. Advises on e-beam methodology,
+          interpretation of irradiation results, and defect-engineering mechanisms.
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © Linkberry · Lab-Grown Diamond RWA & Color-Enhancement NFT Concept ·
+  This page is for concept & discussion only, not financial advice.
+</footer>
+
+</body>
+</html>
