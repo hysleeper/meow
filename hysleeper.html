@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>김상유 박사 | 경력 및 연구실적</title>
+  <meta name="description" content="김상유 박사 프로필: 플라즈마 소스 공학, 플라즈마 재료, 의공학 및 화학공학. 학력/경력/논문/특허 실적 요약." />
+  <style>
+    :root{
+      --bg:#0b1020; --card:#111a33; --text:#e9eefc; --muted:#b8c2e6;
+      --accent:#7aa7ff; --line:rgba(255,255,255,.12);
+      --chip:rgba(122,167,255,.14);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans KR", Arial, sans-serif;
+      background: radial-gradient(1200px 800px at 20% 10%, rgba(122,167,255,.20), transparent 55%),
+                  radial-gradient(900px 700px at 80% 20%, rgba(0,255,209,.12), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:980px; margin:0 auto; padding:36px 18px 60px}
+    header{
+      padding:22px 18px; border:1px solid var(--line); background:rgba(17,26,51,.72);
+      border-radius:18px; backdrop-filter: blur(10px);
+    }
+    .title{
+      display:flex; flex-wrap:wrap; gap:14px; align-items:baseline; justify-content:space-between;
+    }
+    h1{margin:0; font-size:28px; letter-spacing:-.2px}
+    .subtitle{color:var(--muted); margin-top:6px}
+    .meta{display:flex; flex-wrap:wrap; gap:10px; margin-top:12px}
+    .chip{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 10px; border-radius:999px; background:var(--chip);
+      border:1px solid rgba(122,167,255,.25);
+      color:var(--text); font-size:13px;
+    }
+    main{margin-top:18px; display:grid; gap:14px}
+    .card{
+      padding:18px; border:1px solid var(--line); background:rgba(17,26,51,.62);
+      border-radius:18px; backdrop-filter: blur(10px);
+    }
+    h2{margin:0 0 12px; font-size:18px}
+    ul{margin:0; padding-left:18px}
+    li{margin:8px 0}
+    .two-col{
+      display:grid; grid-template-columns: 1fr; gap:14px;
+    }
+    @media (min-width: 860px){
+      .two-col{grid-template-columns: 1fr 1fr}
+    }
+    .small{color:var(--muted); font-size:13px}
+    .kicker{color:var(--muted); font-weight:600; font-size:12px; letter-spacing:.2px; text-transform:uppercase}
+    .hr{height:1px; background:var(--line); margin:14px 0}
+    footer{margin-top:18px; color:var(--muted); font-size:12px; text-align:center}
+    .pubs li{margin:10px 0}
+    .pubs .journal{color:var(--muted)}
+  </style>
+
+  <!-- Optional: Rich snippet (JSON-LD) for search engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "김상유",
+    "honorificSuffix": "박사",
+    "jobTitle": ["겸임교수", "연구원"],
+    "affiliation": [
+      {"@type":"Organization","name":"대전대학교 반도체공학과"},
+      {"@type":"Organization","name":"SK넥실리스 기업연구소"}
+    ],
+    "alumniOf": [
+      {"@type":"CollegeOrUniversity","name":"한양대학교"}
+    ],
+    "email": "mailto:hysleeper@gmail.com",
+    "knowsAbout": [
+      "플라즈마 소스 공학",
+      "플라즈마 재료",
+      "플라즈마 진단",
+      "의공학",
+      "화학공학",
+      "대기압 DBD",
+      "핵융합 엣지 플라즈마"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="title">
+        <div>
+          <h1>김상유 박사</h1>
+          <div class="subtitle">플라즈마 소스 공학 · 플라즈마 재료 · 의공학 및 화학공학</div>
+        </div>
+        <div class="chip" aria-label="contact email">
+          <span>이메일</span>
+          <strong><a href="mailto:hysleeper@gmail.com">hysleeper@gmail.com</a></strong>
+        </div>
+      </div>
+
+      <div class="meta">
+        <span class="chip">전공: 플라즈마 진단 및 플라즈마 공학</span>
+        <span class="chip">관심분야: 대기압 플라즈마(DBD/Jet), 플라즈마-재료 상호작용, 바이오/의공학 응용</span>
+        <span class="chip">융합 엣지 플라즈마 시뮬레이션 및 선형 플라즈마 장치</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="two-col">
+        <div class="card">
+          <div class="kicker">Education</div>
+          <h2>학력사항</h2>
+          <ul>
+            <li><strong>학부</strong> : 한양대학교 원자력공학 (공학사)</li>
+            <li><strong>석사</strong> : 한양대학교 원자력공학 (공학석사)</li>
+            <li><strong>박사</strong> : 한양대학교 전기공학 (공학박사)</li>
+          </ul>
+          <div class="hr"></div>
+          <p class="small">
+            연구 기반: 플라즈마 진단, 대기압 방전(표면 DBD 포함), 플라즈마-재료 상호작용,
+            바이오/의공학 응용 및 시스템 공학 관점의 플라즈마 소스 개발.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="kicker">Experience</div>
+          <h2>경력사항</h2>
+          <ul>
+            <li><strong>2026.03 ~ 현재</strong> : 대전대학교 반도체공학과 겸임교수</li>
+            <li><strong>2010 ~ 현재</strong> : SK넥실리스 기업연구소 (구. LS엠트론, KCFT)</li>
+            <li><strong>2008 ~ 2009</strong> : ㈜ 서흥플라즈마 기업연구소</li>
+            <li><strong>2003</strong> : 국가핵융합연구소 위촉연구원</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="kicker">Publications</div>
+        <h2>논문</h2>
+        <ol class="pubs">
+          <li>
+            Feasibility Studies on Inactivation of <em>Staphylococcus aureus</em> with a High Voltage DCDC Atmospheric Plasma Source
+            <span class="journal">— Journal of Nanoscience and Nanotechnology 17(11):8446-8449</span>
+          </li>
+          <li>
+            Experimental visualization of the cathode layer in AC surface dielectric barrier discharge
+            <span class="journal">— Physics of Plasmas 25, 064503 (2018)</span>
+          </li>
+          <li>
+            Traces of cathode glow in atmospheric surface dielectric barrier discharge
+            <span class="journal">— AIP Advances 8, 125321 (2018)</span>
+          </li>
+          <li>
+            The traces of positive charge interactions at surface dielectric barrier discharge
+            <span class="journal">— Physics of Plasmas 26, 014503 (2019)</span>
+          </li>
+          <li>
+            Wound Healing Effect of Non-Thermal Atmospheric Pressure Plasma Jet on a Rat Burn Wound Model: A Preliminary Study
+            <span class="journal">— Journal of Burn Care &amp; Research, 40(6), 923–929 (2019)</span>
+          </li>
+          <li>
+            Development of plasma sources and diagnostics for the simulation of fusion edge plasmas
+            <span class="journal">— Journal of the Korean Physical Society 80, 735-758 (2022)</span>
+          </li>
+          <li>
+            Simulations of fusion edge plasmas by linear plasma devices: physics and plasma–material interactions
+            <span class="journal">— Journal of the Korean Physical Society 80, 717-734 (2022)</span>
+          </li>
+          <li>
+            Reducing Ozone Generation in Dielectric Barrier Discharge Plasma for Biomedical Applications
+            <span class="journal">— Journal of Nanoelectronics and Optoelectronics, Vol.20, pp.1–7 (2025)</span>
+          </li>
+        </ol>
+        <p class="small">※ 필요 시 DOI/링크, 공동저자, 키워드, 인용정보(Scopus/Google Scholar)를 추가해 검색 노출을 강화할 수 있습니다.</p>
+      </section>
+
+      <section class="card">
+        <div class="kicker">Patents</div>
+        <h2>특허실적</h2>
+        <p class="small">
+          (여기에 특허 목록을 추가해 주세요: 출원/등록 번호, 명칭, 출원일/등록일, 출원인/발명자, 요약 1~2줄)
+        </p>
+        <ul>
+          <li>예시) [등록] KR10-XXXXXXXXXX — “대기압 플라즈마 소스 및 이를 이용한 살균/치유 시스템” (YYYY-MM-DD)</li>
+          <li>예시) [출원] KR10-XXXXXXXXXX — “표면 DBD 기반 플라즈마-재료 상호작용 제어 방법” (YYYY-MM-DD)</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <div class="kicker">Keywords</div>
+        <h2>핵심 키워드</h2>
+        <div class="meta">
+          <span class="chip">Surface DBD</span>
+          <span class="chip">Atmospheric-pressure plasma</span>
+          <span class="chip">Plasma diagnostics</span>
+          <span class="chip">Plasma–material interactions</span>
+          <span class="chip">Biomedical plasma</span>
+          <span class="chip">Fusion edge plasma</span>
+          <span class="chip">Linear plasma devices</span>
+          <span class="chip">Ozone mitigation</span>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="year"></span> 김상유 박사. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
