@@ -1,6 +1,22 @@
 <!doctype html>
 <html lang="ko">
 <head>
+      <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Meow World</title>
+    <style>
+        body { margin: 0; overflow: hidden; background: #000; }
+        #info-overlay {
+            position: absolute;
+            bottom: 30px;
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-family: 'Apple SD Gothic Neo', sans-serif;
+            pointer-events: none;
+            text-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+    </style>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>김상유 박사 | 경력 및 연구실적</title>
@@ -90,6 +106,86 @@
 </head>
 
 <body>
+    <div id="info-overlay">
+    </div>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+
+    <script type="module">
+        import * as THREE from 'three';
+        import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+        // 1. 기본 씬 설정
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(window.devicePixelRatio);
+        document.body.appendChild(renderer.domElement);
+
+        // 2. 우주 배경 (별점 생성)
+        const starGeometry = new THREE.BufferGeometry();
+        const starMaterial = new THREE.PointsMaterial({ color: 0xffffff });
+        const starVertices = [];
+        for (let i = 0; i < 5000; i++) {
+            starVertices.push(THREE.MathUtils.randFloatSpread(1000), THREE.MathUtils.randFloatSpread(1000), THREE.MathUtils.randFloatSpread(1000));
+        }
+        starGeometry.setAttribute('position', new THREE.Float32BufferAttribute(starVertices, 3));
+        const stars = new THREE.Points(starGeometry, starMaterial);
+        scene.add(stars);
+
+        // 3. 3D 카드 생성 (기존 페이지 이미지 대체)
+        const loader = new THREE.TextureLoader();
+        const geometry = new THREE.BoxGeometry(3, 4, 0.1); // 입체감 있는 카드 형태
+        
+        // 주의: 실제 이미지 경로로 수정이 필요합니다.
+        const texture = loader.load('https://hysleeper.github.io/meow/meow.jpg'); 
+        const material = new THREE.MeshStandardMaterial({ map: texture });
+        const card = new THREE.Mesh(geometry, material);
+        scene.add(card);
+
+        // 4. 조명
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
+        scene.add(ambientLight);
+        const pointLight = new THREE.PointLight(0xffffff, 1.5);
+        pointLight.position.set(5, 5, 5);
+        scene.add(pointLight);
+
+        camera.position.z = 8;
+
+        // 5. 컨트롤
+        const controls = new OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true;
+
+        // 6. 애니메이션
+        function animate() {
+            requestAnimationFrame(animate);
+            
+            // 카드가 천천히 회전하는 효과
+            card.rotation.y += 0.005;
+            card.position.y = Math.sin(Date.now() * 0.002) * 0.2; 
+
+            stars.rotation.y += 0.0002;
+
+            controls.update();
+            renderer.render(scene, camera);
+        }
+
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        animate();
+    </script>
   <div class="wrap">
     <header>
       <div class="title">
@@ -235,6 +331,7 @@
   </script>
 </body>
 </html>
+
 
 
 
