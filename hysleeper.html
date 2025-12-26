@@ -1,113 +1,90 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
-      <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Meow World</title>
+    <title>김상유 박사 | 3D 프로필</title>
     <style>
-        body { margin: 0; overflow: hidden; background: #000; }
-        #info-overlay {
-            position: absolute;
-            bottom: 30px;
-            width: 100%;
-            text-align: center;
-            color: white;
-            font-family: 'Apple SD Gothic Neo', sans-serif;
-            pointer-events: none;
-            text-shadow: 0 0 10px rgba(0,0,0,0.5);
+        :root {
+            --bg: #0b1020; --card: #111a33; --text: #e9eefc; --muted: #b8c2e6;
+            --accent: #7aa7ff; --line: rgba(255,255,255,.12);
+            --chip: rgba(122,167,255,.14);
         }
+
+        /* 3D 캔버스 설정: 배경으로 고정 */
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            outline: none;
+            z-index: -1; /* 컨텐츠 뒤로 배치 */
+        }
+
+        body {
+            margin: 0;
+            /* overflow: hidden 삭제하여 스크롤 허용 */
+            font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans KR", Arial, sans-serif;
+            color: var(--text);
+            line-height: 1.55;
+            background-color: var(--bg); /* 3D 로드 전 기본 배경색 */
+        }
+
+        /* 컨텐츠 레이어 */
+        .wrap {
+            position: relative;
+            z-index: 1;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 36px 18px 60px;
+        }
+
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        header {
+            padding: 22px 18px;
+            border: 1px solid var(--line);
+            background: rgba(17, 26, 51, 0.72);
+            border-radius: 18px;
+            backdrop-filter: blur(10px);
+        }
+
+        .title { display: flex; flex-wrap: wrap; gap: 14px; align-items: baseline; justify-content: space-between; }
+        h1 { margin: 0; font-size: 28px; letter-spacing: -.2px; }
+        .subtitle { color: var(--muted); margin-top: 6px; }
+        .meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+        .chip {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 8px 10px; border-radius: 999px; background: var(--chip);
+            border: 1px solid rgba(122, 167, 255, .25);
+            color: var(--text); font-size: 13px;
+        }
+
+        main { margin-top: 18px; display: grid; gap: 14px; }
+        .card {
+            padding: 18px; border: 1px solid var(--line);
+            background: rgba(17, 26, 51, 0.62);
+            border-radius: 18px; backdrop-filter: blur(10px);
+        }
+
+        h2 { margin: 0 0 12px; font-size: 18px; }
+        ul { margin: 0; padding-left: 18px; }
+        li { margin: 8px 0; }
+        .two-col { display: grid; grid-template-columns: 1fr; gap: 14px; }
+
+        @media (min-width: 860px) {
+            .two-col { grid-template-columns: 1fr 1fr; }
+        }
+
+        .small { color: var(--muted); font-size: 13px; }
+        .kicker { color: var(--muted); font-weight: 600; font-size: 12px; letter-spacing: .2px; text-transform: uppercase; }
+        .hr { height: 1px; background: var(--line); margin: 14px 0; }
+        footer { margin-top: 18px; color: var(--muted); font-size: 12px; text-align: center; }
+        .pubs li { margin: 10px 0; }
+        .pubs .journal { color: var(--muted); }
     </style>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>김상유 박사 | 경력 및 연구실적</title>
-  <meta name="description" content="김상유 박사 프로필: 플라즈마 소스 공학, 플라즈마 재료, 의공학 및 화학공학. 학력/경력/논문/특허 실적 요약." />
-  <style>
-    :root{
-      --bg:#0b1020; --card:#111a33; --text:#e9eefc; --muted:#b8c2e6;
-      --accent:#7aa7ff; --line:rgba(255,255,255,.12);
-      --chip:rgba(122,167,255,.14);
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans KR", Arial, sans-serif;
-      background: radial-gradient(1200px 800px at 20% 10%, rgba(122,167,255,.20), transparent 55%),
-                  radial-gradient(900px 700px at 80% 20%, rgba(0,255,209,.12), transparent 55%),
-                  var(--bg);
-      color:var(--text);
-      line-height:1.55;
-    }
-    a{color:var(--accent); text-decoration:none}
-    a:hover{text-decoration:underline}
-    .wrap{max-width:980px; margin:0 auto; padding:36px 18px 60px}
-    header{
-      padding:22px 18px; border:1px solid var(--line); background:rgba(17,26,51,.72);
-      border-radius:18px; backdrop-filter: blur(10px);
-    }
-    .title{
-      display:flex; flex-wrap:wrap; gap:14px; align-items:baseline; justify-content:space-between;
-    }
-    h1{margin:0; font-size:28px; letter-spacing:-.2px}
-    .subtitle{color:var(--muted); margin-top:6px}
-    .meta{display:flex; flex-wrap:wrap; gap:10px; margin-top:12px}
-    .chip{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:8px 10px; border-radius:999px; background:var(--chip);
-      border:1px solid rgba(122,167,255,.25);
-      color:var(--text); font-size:13px;
-    }
-    main{margin-top:18px; display:grid; gap:14px}
-    .card{
-      padding:18px; border:1px solid var(--line); background:rgba(17,26,51,.62);
-      border-radius:18px; backdrop-filter: blur(10px);
-    }
-    h2{margin:0 0 12px; font-size:18px}
-    ul{margin:0; padding-left:18px}
-    li{margin:8px 0}
-    .two-col{
-      display:grid; grid-template-columns: 1fr; gap:14px;
-    }
-    @media (min-width: 860px){
-      .two-col{grid-template-columns: 1fr 1fr}
-    }
-    .small{color:var(--muted); font-size:13px}
-    .kicker{color:var(--muted); font-weight:600; font-size:12px; letter-spacing:.2px; text-transform:uppercase}
-    .hr{height:1px; background:var(--line); margin:14px 0}
-    footer{margin-top:18px; color:var(--muted); font-size:12px; text-align:center}
-    .pubs li{margin:10px 0}
-    .pubs .journal{color:var(--muted)}
-  </style>
-
-  <!-- Optional: Rich snippet (JSON-LD) for search engines -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "김상유",
-    "honorificSuffix": "박사",
-    "jobTitle": ["겸임교수", "연구원"],
-    "affiliation": [
-      {"@type":"Organization","name":"대전대학교 반도체공학과"},
-      {"@type":"Organization","name":"SK넥실리스 생산기술센터"}
-    ],
-    "alumniOf": [
-      {"@type":"CollegeOrUniversity","name":"한양대학교"}
-    ],
-    "email": "mailto:hysleeper@gmail.com",
-    "knowsAbout": [
-      "플라즈마 소스 공학",
-      "플라즈마 재료 공정",
-      "플라즈마 진단",
-      "플라즈마 의공학",
-      "화학공학",
-      "대기압 DBD"
-    ]
-  }
-  </script>
 </head>
-
 <body>
-    <div id="info-overlay">
-    </div>
 
     <script type="importmap">
         {
@@ -120,19 +97,18 @@
 
     <script type="module">
         import * as THREE from 'three';
-        import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
         // 1. 기본 씬 설정
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
         renderer.setSize(window.innerWidth, window.innerHeight);
         renderer.setPixelRatio(window.devicePixelRatio);
         document.body.appendChild(renderer.domElement);
 
         // 2. 우주 배경 (별점 생성)
         const starGeometry = new THREE.BufferGeometry();
-        const starMaterial = new THREE.PointsMaterial({ color: 0xffffff });
+        const starMaterial = new THREE.PointsMaterial({ color: 0xffffff, size: 0.7 });
         const starVertices = [];
         for (let i = 0; i < 5000; i++) {
             starVertices.push(THREE.MathUtils.randFloatSpread(1000), THREE.MathUtils.randFloatSpread(1000), THREE.MathUtils.randFloatSpread(1000));
@@ -141,40 +117,30 @@
         const stars = new THREE.Points(starGeometry, starMaterial);
         scene.add(stars);
 
-        // 3. 3D 카드 생성 (기존 페이지 이미지 대체)
+        // 3. 3D 카드 생성
         const loader = new THREE.TextureLoader();
-        const geometry = new THREE.BoxGeometry(3, 4, 0.1); // 입체감 있는 카드 형태
-        
-        // 주의: 실제 이미지 경로로 수정이 필요합니다.
+        const geometry = new THREE.BoxGeometry(3, 4, 0.1);
         const texture = loader.load('https://hysleeper.github.io/meow/meow.jpg'); 
         const material = new THREE.MeshStandardMaterial({ map: texture });
         const card = new THREE.Mesh(geometry, material);
+        card.position.set(0, 0, -5); // 컨텐츠와 겹치지 않게 뒤로 배치
         scene.add(card);
 
         // 4. 조명
-        const ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
+        const ambientLight = new THREE.AmbientLight(0xffffff, 1.2);
         scene.add(ambientLight);
-        const pointLight = new THREE.PointLight(0xffffff, 1.5);
+        const pointLight = new THREE.PointLight(0xffffff, 2);
         pointLight.position.set(5, 5, 5);
         scene.add(pointLight);
 
-        camera.position.z = 8;
+        camera.position.z = 10;
 
-        // 5. 컨트롤
-        const controls = new OrbitControls(camera, renderer.domElement);
-        controls.enableDamping = true;
-
-        // 6. 애니메이션
+        // 5. 애니메이션 (OrbitControls 제외 - 텍스트 스크롤 방해 방지)
         function animate() {
             requestAnimationFrame(animate);
-            
-            // 카드가 천천히 회전하는 효과
             card.rotation.y += 0.005;
-            card.position.y = Math.sin(Date.now() * 0.002) * 0.2; 
-
-            stars.rotation.y += 0.0002;
-
-            controls.update();
+            card.position.y = Math.sin(Date.now() * 0.001) * 0.5;
+            stars.rotation.y += 0.0001;
             renderer.render(scene, camera);
         }
 
@@ -186,60 +152,52 @@
 
         animate();
     </script>
-  <div class="wrap">
-    <header>
-      <div class="title">
-        <div>
-          <h1>김상유 박사 (1977년생)</h1>
-          <div class="subtitle">플라즈마 소스 공학 · 플라즈마 재료 · 의공학 및 화학공학</div>
-          <div class="subtitle">0000-0002-3648-0988</div>          
-        </div>
-        <div class="chip" aria-label="contact email">
-          <span>이메일</span>
-          <strong><a href="mailto:hysleeper@gmail.com">hysleeper@gmail.com</a></strong>
-        </div>
-      </div>
 
-      <div class="meta">
-        <span class="chip">전공: 플라즈마 진단 및 플라즈마 공학</span>
-        <span class="chip">관심분야: 진공 및 대기압 플라즈마, 플라즈마-재료 상호작용, 바이오/의공학 응용</span>
-        <span class="chip">보석 및 산업용 다이아몬드 제조 기술</span>
-      </div>
-    </header>
+    <div class="wrap">
+        <header>
+            <div class="title">
+                <div>
+                    <h1>김상유 박사 (1977년생)</h1>
+                    <div class="subtitle">플라즈마 소스 공학 · 플라즈마 재료 · 의공학 및 화학공학</div>
+                    <div class="subtitle">ORCID: 0000-0002-3648-0988</div>          
+                </div>
+                <div class="chip">
+                    <span>이메일</span>
+                    <strong><a href="mailto:hysleeper@gmail.com">hysleeper@gmail.com</a></strong>
+                </div>
+            </div>
+            <div class="meta">
+                <span class="chip">전공: 플라즈마 진단 및 공학</span>
+                <span class="chip">관심분야: 대기압 플라즈마, 바이오/의공학 응용</span>
+            </div>
+        </header>
 
-    <main>
-      <section class="two-col">
-        <div class="card">
-          <div class="kicker">Education</div>
-          <h2>학력사항</h2>
-          <ul>
-            <li><strong>학부</strong> : 한양대학교 서울캠퍼스 원자력공학 (공학사)</li>
-            <li><strong>석사</strong> : 한양대학교 서울캠퍼스 원자력공학 (공학석사)</li>
-            <li><strong>박사</strong> : 한양대학교 서울캠퍼스 전기공학 (공학박사)</li>
-          </ul>
-          <div class="hr"></div>
-          <p class="small">
-            연구 기반: 플라즈마 진단, 대기압 방전, 플라즈마-재료 상호작용,
-            바이오/의공학 응용 및 시스템 공학 관점의 플라즈마 소스 개발.
-          </p>
-        </div>
+        <main>
+            <section class="two-col">
+                <div class="card">
+                    <div class="kicker">Education</div>
+                    <h2>학력사항</h2>
+                    <ul>
+                        <li><strong>학부/석사</strong> : 한양대학교 원자력공학</li>
+                        <li><strong>박사</strong> : 한양대학교 전기공학 (공학박사)</li>
+                    </ul>
+                    <div class="hr"></div>
+                    <p class="small">연구 기반: 플라즈마 진단, 시스템 공학 관점의 소스 개발.</p>
+                </div>
+                <div class="card">
+                    <div class="kicker">Experience</div>
+                    <h2>경력사항</h2>
+                    <ul>
+                        <li><strong>2024 ~ 현재</strong> : 대전대학교 반도체공학과 실험 지도</li>
+                        <li><strong>2009 ~ 현재</strong> : SK넥실리스 생산기술센터</li>
+                    </ul>
+                </div>
+            </section>
 
-        <div class="card">
-          <div class="kicker">Experience</div>
-          <h2>경력사항</h2>
-          <ul>
-            <li><strong>2024 ~ 현재 </strong> : 대전대학교 반도체공학과 구민 교수 Lab 실험 지도</li>
-            <li><strong>2009 ~ 현재</strong> : SK넥실리스 생산기술센터 (구. LS엠트론, KCFT)</li>
-            <li><strong>2007 ~ 2008</strong> : ㈜ 서흥플라즈마 기업연구소</li>
-            <li><strong>2003</strong> : 국가핵융합연구소 위촉연구원</li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="card">
-        <div class="kicker">Publications</div>
-        <h2>논문</h2>
-        <ol class="pubs">
+            <section class="card">
+                <div class="kicker">Publications</div>
+                <h2>주요 논문</h2>
+                <ol class="pubs">
           <li>
             Feasibility Studies on Inactivation of <em>Staphylococcus aureus</em> with a High Voltage DCDC Atmospheric Plasma Source
             <span class="journal">— Journal of Nanoscience and Nanotechnology 17(11):8446-8449</span>
@@ -272,14 +230,13 @@
             Reducing Ozone Generation in Dielectric Barrier Discharge Plasma for Biomedical Applications
             <span class="journal">— Journal of Nanoelectronics and Optoelectronics, Vol.20, pp.1–7 (2025)</span>
           </li>
-        </ol>
-        <p class="small"></p>
-      </section>
+                </ol>
+            </section>
 
-      <section class="card">
-        <div class="kicker">Patents</div>
-        <h2>특허실적</h2>
-        <p class="small">
+            <section class="card">
+                <div class="kicker">Patents</div>
+                <h2>특허 및 실적</h2>
+                <p class="small">
         1.	살충장치 : 대기압 플라즈마로 폴리머 필름을 식각할 때 발생하는 이산화탄소를 이용한 해충 유도 및 제거 장치/1020190131371(2019-10-22)/제1발명자 <br>
         2.	포장용기 및 포장방법 / 1020190028754(2019-03-13)/제1발명자<br>
         3.	플라즈마 발생장치/1020180115587(2018-09-28)/제1발명자 (기술이전, 주식회사 세이브프롬)<br>
@@ -299,38 +256,21 @@
         17.	플라즈마 밴드/ 1020150047008(2015-04-02)/제1발명자<br>
         18.	폴리머-세라믹-금속 적층막/ 1020080039131(2008-04-28)/공동발명자<br>
         19.	박막 증착 장치/ 1020080039132(2008-04-28)/공동발명자<br>
+                </p>
+            </section>
+        </main>
 
-        </p>
-        <ul>
-        </ul>
-      </section>
+        <footer>
+            © <span id="year"></span> 김상유 박사. All rights reserved.
+        </footer>
+    </div>
 
-      <section class="card">
-        <div class="kicker">Keywords</div>
-        <h2>핵심 키워드</h2>
-        <div class="meta">
-          <span class="chip">Surface DBD</span>
-          <span class="chip">Atmospheric-pressure plasma</span>
-          <span class="chip">Plasma diagnostics</span>
-          <span class="chip">Plasma–material interactions</span>
-          <span class="chip">Biomedical plasma</span>
-          <span class="chip">Fusion edge plasma</span>
-          <span class="chip">Linear plasma devices</span>
-          <span class="chip">Ozone mitigation</span>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      © <span id="year"></span> 김상유 박사. All rights reserved.
-    </footer>
-  </div>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
+
 
 
 
