@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>주식회사 펄 (Pearl) · 플라즈마 + BDDE 무독 질소수</title>
+<meta name="description" content="공기·물·잉여 태양광으로 저장 가능한 무독 질소수(NO3-)를 현장 생산하는 딥테크 스타트업, 주식회사 펄의 투자 소개.">
+<style>
+  :root{
+    --navy:#14315B; --blue:#2E6FB5; --teal:#2FA8C4; --green:#2E9E5B;
+    --coral:#D8452F; --gold:#B7791B; --pearl:#EAF1F8; --light:#F2F6FA;
+    --line:#D9E4EF; --ink:#14315B; --body:#41586A; --muted:#6A7E8C;
+    --maxw:1120px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Noto Sans KR','Malgun Gothic','맑은 고딕',sans-serif;
+    color:var(--body); line-height:1.65; background:#fff;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{color:var(--ink); line-height:1.3; font-weight:800;}
+  a{color:inherit; text-decoration:none;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px;}
+  .eyebrow{color:var(--blue); font-weight:800; font-size:.82rem; letter-spacing:.14em; text-transform:uppercase; margin-bottom:14px;}
+  section{padding:86px 0;}
+  .section-title{font-size:2rem; margin-bottom:14px;}
+  .section-sub{font-size:1.05rem; color:var(--muted); max-width:720px; margin-bottom:44px;}
+
+  /* NAV */
+  header{position:sticky; top:0; z-index:50; background:rgba(255,255,255,.88); backdrop-filter:blur(10px); border-bottom:1px solid var(--line);}
+  .nav{display:flex; align-items:center; justify-content:space-between; height:66px;}
+  .brand{display:flex; align-items:center; gap:11px; font-weight:800; color:var(--navy); font-size:1.18rem;}
+  .brand .logo{width:30px; height:30px;}
+  .nav-links{display:flex; gap:28px; align-items:center;}
+  .nav-links a{font-size:.93rem; font-weight:600; color:var(--body); transition:color .2s;}
+  .nav-links a:hover{color:var(--blue);}
+  .nav-cta{background:var(--navy); color:#fff!important; padding:9px 18px; border-radius:8px; font-weight:700;}
+  .nav-cta:hover{background:var(--blue);}
+  .burger{display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none;}
+  .burger span{width:24px; height:2px; background:var(--navy); border-radius:2px;}
+
+  /* HERO */
+  .hero{position:relative; overflow:hidden; background:linear-gradient(160deg,#0d2547 0%,var(--navy) 45%,#1c4a86 90%,#2E6FB5 130%); color:#fff; padding:96px 0 104px;}
+  .hero:before{content:""; position:absolute; inset:0; background:radial-gradient(circle at 82% 18%, rgba(47,168,196,.35), transparent 42%), radial-gradient(circle at 12% 88%, rgba(46,158,91,.22), transparent 40%);}
+  .hero .wrap{position:relative; z-index:2; display:grid; grid-template-columns:1.15fr .85fr; gap:48px; align-items:center;}
+  .hero h1{color:#fff; font-size:2.85rem; line-height:1.22; letter-spacing:-.01em;}
+  .hero h1 .hl{color:#7FD3E6;}
+  .hero p.lead{color:#C9DBF0; font-size:1.16rem; margin-top:22px; max-width:560px;}
+  .hero .tags{display:flex; flex-wrap:wrap; gap:10px; margin-top:28px;}
+  .tag{background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.22); padding:7px 14px; border-radius:20px; font-size:.85rem; font-weight:600; color:#EAF1F8;}
+  .hero .btns{display:flex; gap:14px; margin-top:34px; flex-wrap:wrap;}
+  .btn{display:inline-block; padding:13px 26px; border-radius:9px; font-weight:800; font-size:.98rem; transition:transform .15s, box-shadow .2s;}
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{background:var(--gold); color:#fff;}
+  .btn-ghost{background:rgba(255,255,255,.1); color:#fff; border:1px solid rgba(255,255,255,.35);}
+  .hero-card{background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.18); border-radius:18px; padding:28px;}
+  .hero-card h4{color:#fff; font-size:1rem; margin-bottom:18px; font-weight:700;}
+  .metric{display:flex; justify-content:space-between; align-items:baseline; padding:13px 0; border-bottom:1px solid rgba(255,255,255,.12);}
+  .metric:last-child{border-bottom:none;}
+  .metric .v{font-size:1.5rem; font-weight:800; color:#7FD3E6;}
+  .metric .k{font-size:.86rem; color:#B9CCE4; text-align:right; max-width:180px;}
+
+  /* generic cards */
+  .grid{display:grid; gap:22px;}
+  .g3{grid-template-columns:repeat(3,1fr);}
+  .g2{grid-template-columns:repeat(2,1fr);}
+  .g4{grid-template-columns:repeat(4,1fr);}
+  .card{background:var(--light); border:1px solid var(--line); border-radius:14px; padding:26px; transition:box-shadow .25s, transform .2s;}
+  .card:hover{box-shadow:0 12px 34px rgba(20,49,91,.10); transform:translateY(-3px);}
+  .card .ic{width:46px; height:46px; border-radius:11px; display:flex; align-items:center; justify-content:center; font-size:1.35rem; margin-bottom:16px; background:#fff; border:1px solid var(--line);}
+  .card h3{font-size:1.14rem; margin-bottom:9px;}
+  .card p{font-size:.95rem; color:var(--body);}
+  .bar{width:38px; height:4px; border-radius:3px; background:var(--blue); margin-bottom:22px;}
+
+  /* problem */
+  #problem{background:var(--light);}
+  .prob-card{background:#fff; border-left:4px solid var(--coral);}
+  .prob-card .ic{color:var(--coral); border-color:#F3D6D0; background:#FBE9E5;}
+
+  /* solution steps */
+  .flow{background:#fff; border:1px solid var(--line); border-radius:16px; padding:14px; overflow:hidden;}
+  .flow svg{width:100%; height:auto; display:block;}
+  .step-row{display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:26px;}
+  .step{background:var(--light); border:1px solid var(--line); border-radius:12px; padding:20px;}
+  .step .n{width:30px; height:30px; border-radius:50%; background:var(--navy); color:#fff; font-weight:800; display:flex; align-items:center; justify-content:center; font-size:.9rem; margin-bottom:12px;}
+  .step h4{font-size:1rem; margin-bottom:6px;}
+  .step p{font-size:.88rem; color:var(--muted);}
+
+  /* tech highlight band */
+  .band{background:var(--navy); color:#fff; border-radius:16px; padding:34px 38px; display:grid; grid-template-columns:repeat(3,1fr); gap:28px; margin-top:34px;}
+  .band .item h4{color:#7FD3E6; font-size:1.9rem; margin-bottom:6px;}
+  .band .item p{color:#C9DBF0; font-size:.92rem;}
+
+  /* business / P2X */
+  #biz{background:linear-gradient(180deg,#fff, var(--light));}
+  .p2x{display:grid; grid-template-columns:.9fr 1.1fr; gap:40px; align-items:center;}
+  .p2x svg{width:100%; height:auto;}
+  .fr-cards{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:26px;}
+  .fr{background:#fff; border:1px solid var(--line); border-radius:12px; padding:20px; border-top:4px solid var(--gold);}
+  .fr.b{border-top-color:var(--green);}
+  .fr h4{font-size:1.02rem; margin-bottom:8px;}
+  .fr p{font-size:.9rem;}
+
+  /* economics table */
+  .tea{width:100%; border-collapse:collapse; background:#fff; border:1px solid var(--line); border-radius:12px; overflow:hidden; font-size:.94rem;}
+  .tea th,.tea td{padding:14px 16px; text-align:left; border-bottom:1px solid var(--line);}
+  .tea th{background:var(--navy); color:#fff; font-weight:700; font-size:.9rem;}
+  .tea tr:last-child td{border-bottom:none;}
+  .tea .hi{background:#E7F5EC;}
+  .tea .hi td{font-weight:700; color:var(--ink);}
+  .tea .rank{color:var(--green); font-weight:800;}
+  .note{font-size:.82rem; color:var(--muted); margin-top:14px;}
+
+  /* market */
+  #market{background:var(--navy); color:#fff;}
+  #market .section-title{color:#fff;}
+  #market .section-sub{color:#AFC4E0;}
+  .mkt-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+  .mkt{background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.16); border-radius:14px; padding:26px;}
+  .mkt .v{font-size:2rem; font-weight:800; color:#7FD3E6; margin-bottom:6px;}
+  .mkt p{color:#C9DBF0; font-size:.93rem;}
+
+  /* roadmap */
+  .road{display:grid; grid-template-columns:repeat(4,1fr); gap:0; margin-top:20px;}
+  .road .r{position:relative; padding:24px 18px 0;}
+  .road .r:before{content:""; position:absolute; top:6px; left:0; right:0; height:3px; background:var(--line);}
+  .road .r.done:before{background:var(--green);}
+  .road .dot{width:15px; height:15px; border-radius:50%; background:#fff; border:3px solid var(--blue); position:absolute; top:0; left:18px;}
+  .road .r.done .dot{background:var(--green); border-color:var(--green);}
+  .road h4{font-size:.98rem; margin-bottom:6px;}
+  .road span.t{font-size:.78rem; color:var(--gold); font-weight:800; letter-spacing:.05em;}
+  .road p{font-size:.85rem; color:var(--muted); margin-top:4px;}
+
+  /* CTA / contact */
+  #contact{background:linear-gradient(150deg,var(--navy),#1c4a86); color:#fff; text-align:center;}
+  #contact h2{color:#fff; font-size:2.1rem; margin-bottom:16px;}
+  #contact p{color:#C9DBF0; font-size:1.1rem; max-width:600px; margin:0 auto 30px;}
+  .contact-box{display:inline-flex; gap:30px; flex-wrap:wrap; justify-content:center; background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.2); border-radius:14px; padding:22px 34px; margin-top:10px;}
+  .contact-box div{text-align:left;}
+  .contact-box .k{font-size:.78rem; color:#9FC0E2; text-transform:uppercase; letter-spacing:.1em;}
+  .contact-box .val{font-size:1.05rem; font-weight:700; color:#fff;}
+
+  footer{background:#0d2547; color:#8FA6C4; padding:34px 0; font-size:.85rem;}
+  .foot{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px;}
+  .badge{display:inline-block; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.16); padding:4px 12px; border-radius:16px; font-size:.76rem; color:#C9DBF0; margin-top:8px;}
+
+  /* reveal anim */
+  .reveal{opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1; transform:none;}
+
+  @media(max-width:900px){
+    .hero .wrap{grid-template-columns:1fr;}
+    .hero h1{font-size:2.15rem;}
+    .g3,.g4,.band,.step-row,.mkt-grid,.road{grid-template-columns:1fr 1fr;}
+    .p2x{grid-template-columns:1fr;}
+    .nav-links{position:fixed; top:66px; right:0; left:0; background:#fff; flex-direction:column; gap:0; padding:0; max-height:0; overflow:hidden; transition:max-height .3s; border-bottom:1px solid var(--line);}
+    .nav-links.open{max-height:420px; padding:8px 0;}
+    .nav-links a{padding:13px 24px; width:100%;}
+    .burger{display:flex;}
+  }
+  @media(max-width:600px){
+    .g3,.g4,.g2,.band,.step-row,.mkt-grid,.road,.fr-cards{grid-template-columns:1fr;}
+    section{padding:60px 0;}
+    .hero h1{font-size:1.8rem;}
+    .section-title{font-size:1.55rem;}
+    .contact-box{flex-direction:column; gap:16px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand">
+      <svg class="logo" viewBox="0 0 40 40"><defs><linearGradient id="pg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2FA8C4"/><stop offset="1" stop-color="#2E6FB5"/></linearGradient></defs><circle cx="20" cy="20" r="17" fill="url(#pg)"/><circle cx="16" cy="16" r="6" fill="#EAF1F8" opacity=".9"/><circle cx="18" cy="14" r="2.4" fill="#fff"/></svg>
+      주식회사 펄 <span style="font-weight:600;color:var(--muted);font-size:.9rem;">Pearl</span>
+    </a>
+    <nav class="nav-links" id="navlinks">
+      <a href="#problem">문제</a>
+      <a href="#solution">솔루션</a>
+      <a href="#tech">핵심기술</a>
+      <a href="#biz">사업모델</a>
+      <a href="#economics">경제성</a>
+      <a href="#market">시장</a>
+      <a href="#contact" class="nav-cta">투자 문의</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top" style="padding-top:96px;">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow" style="color:#7FD3E6;">Deep-Tech · Plasma Nitrogen Fixation</div>
+      <h1>공기·물·잉여 태양광으로<br><span class="hl">저장 가능한 무독 질소수</span>를<br>현장에서 생산합니다</h1>
+      <p class="lead">플라즈마로 물에 질소를 고정하고, <b style="color:#fff;">BDDE 수중 산화</b>로 독성 아질산(NO₂⁻)을 검출한계 이하로 제거 — 순수 NO₃⁻ 기능수를 버려질 전력으로 만드는 P2X 딥테크.</p>
+      <div class="tags">
+        <span class="tag">플라즈마 + BDDE 융합</span>
+        <span class="tag">Zero-Nitrite 무독화</span>
+        <span class="tag">특허 출원 완료</span>
+        <span class="tag">한양대 기술이전</span>
+      </div>
+      <div class="btns">
+        <a href="#contact" class="btn btn-primary">투자 자료 요청</a>
+        <a href="#solution" class="btn btn-ghost">기술 살펴보기 ↓</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h4>한눈에 보는 Pearl</h4>
+      <div class="metric"><span class="v">≈ 0</span><span class="k">아질산(NO₂⁻) 잔류 — 0.2A에서 검출한계 이하</span></div>
+      <div class="metric"><span class="v">200 ppm</span><span class="k">현장 생산 NO₃⁻ 질소수 농도(baseline)</span></div>
+      <div class="metric"><span class="v">0.30×</span><span class="k">수입 요소 대비 현장 원가(RGA 소스 기준)</span></div>
+      <div class="metric"><span class="v">≈ 0원</span><span class="k">잉여 태양광 전력 기회비용 (P2X)</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section id="problem">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">The Problem</div>
+      <h2 class="section-title">질소비료는 수입·물류·독성 리스크에 묶여 있습니다</h2>
+      <p class="section-sub">농업의 핵심 투입재인 질소비료(요소)는 대부분 수입에 의존하고, 지정학 리스크에 가격이 출렁이며, 플라즈마 수(水)의 아질산은 규제 대상 독성 물질입니다.</p>
+    </div>
+    <div class="grid g3">
+      <div class="card prob-card reveal"><div class="ic">🌍</div><h3>수입 의존 · 가격 급등</h3><p>2026년 호르무즈 봉쇄로 요소 가격 +80%($850/t↑). World Bank·WTO·Bloomberg 확인 — 공급망 단절에 취약한 구조.</p></div>
+      <div class="card prob-card reveal"><div class="ic">🚚</div><h3>물류·유통비가 원가의 44%</h3><p>수입가 외에 해상운임·내륙유통·보관·희석·시비 인건비가 겹쳐 풀랜디드 원가는 3,870원/kg-N에 달합니다.</p></div>
+      <div class="card prob-card reveal"><div class="ic">⚠️</div><h3>아질산(NO₂⁻) 독성 규제</h3><p>플라즈마 활성수의 NO₂⁻는 WHO·EU·EPA가 규제하는 독성 물질. 무독화 없이는 농업·식품 적용이 막힙니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section id="solution">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Our Solution</div>
+      <h2 class="section-title">플라즈마 + 수중 BDDE 산화, 2단 공정</h2>
+      <p class="section-sub">가스 트레인 없이 두 단계 — 플라즈마 용존으로 질소를 고정하고, 수중 BDDE 산화로 독성 NO₂⁻를 NO₃⁻로 전환 — 저장 가능한 무독 질소수를 현장에서 생산합니다.</p>
+    </div>
+    <div class="flow reveal">
+      <svg viewBox="0 0 1240 430" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans KR','Malgun Gothic',sans-serif">
+        <defs>
+          <linearGradient id="pearlg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2FA8C4"/><stop offset="1" stop-color="#2E6FB5"/></linearGradient>
+          <marker id="ah" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#9AAAB2"/></marker>
+        </defs>
+        <rect width="1240" height="430" fill="#fff"/>
+        <text x="40" y="52" font-size="24" font-weight="700" fill="#14315B">Pearl 시스템 — 공기·물·잉여전력 → 무독 질소수</text>
+        <rect x="40" y="110" width="250" height="220" rx="16" fill="#E9F2FA" stroke="#2E6FB5" stroke-width="2"/>
+        <circle cx="120" cy="180" r="24" fill="#B7791B"/>
+        <g stroke="#B7791B" stroke-width="4" stroke-linecap="round"><line x1="120" y1="140" x2="120" y2="126"/><line x1="120" y1="234" x2="120" y2="220"/><line x1="80" y1="180" x2="66" y2="180"/><line x1="174" y1="180" x2="160" y2="180"/></g>
+        <circle cx="200" cy="165" r="10" fill="#2E6FB5"/><circle cx="222" cy="185" r="10" fill="#2FA8C4"/><circle cx="196" cy="200" r="9" fill="#2E6FB5"/>
+        <text x="165" y="285" font-size="18" font-weight="700" fill="#14315B" text-anchor="middle">입력</text>
+        <text x="165" y="310" font-size="14" fill="#41586A" text-anchor="middle">공기 + 물 + 잉여전력</text>
+        <path d="M300 220 h40" stroke="#9AAAB2" stroke-width="6" marker-end="url(#ah)"/>
+        <rect x="352" y="110" width="250" height="220" rx="16" fill="#FBE9E5" stroke="#D8452F" stroke-width="2"/>
+        <path d="M470 150 L440 205 L470 205 L455 260 L500 195 L472 195 Z" fill="#D8452F"/>
+        <text x="477" y="285" font-size="17" font-weight="700" fill="#14315B" text-anchor="middle">① 플라즈마 (DBD/GA)</text>
+        <text x="477" y="310" font-size="14" fill="#41586A" text-anchor="middle">RONS → NO2- / NO3-</text>
+        <path d="M612 220 h40" stroke="#9AAAB2" stroke-width="6" marker-end="url(#ah)"/>
+        <rect x="664" y="110" width="250" height="220" rx="16" fill="#E7F5EC" stroke="#2E9E5B" stroke-width="2"/>
+        <rect x="740" y="150" width="18" height="90" rx="3" fill="#14315B"/><rect x="820" y="150" width="18" height="90" rx="3" fill="#2E9E5B"/>
+        <circle cx="775" cy="205" r="7" fill="#2FA8C4"/><circle cx="800" cy="225" r="6" fill="#2FA8C4"/><circle cx="805" cy="185" r="6" fill="#2FA8C4"/>
+        <text x="789" y="285" font-size="17" font-weight="700" fill="#14315B" text-anchor="middle">② BDDE 수중 산화</text>
+        <text x="789" y="310" font-size="14" fill="#41586A" text-anchor="middle">NO2- → NO3- (무독)</text>
+        <path d="M924 220 h40" stroke="#9AAAB2" stroke-width="6" marker-end="url(#ah)"/>
+        <rect x="976" y="110" width="224" height="220" rx="16" fill="#EAF1F8" stroke="#1E7A46" stroke-width="2"/>
+        <path d="M1088 148 C1120 190 1128 210 1088 250 C1052 210 1058 188 1088 148 Z" fill="url(#pearlg)"/>
+        <circle cx="1088" cy="215" r="13" fill="#EAF1F8"/><circle cx="1093" cy="211" r="5" fill="#fff"/>
+        <text x="1088" y="285" font-size="17" font-weight="700" fill="#14315B" text-anchor="middle">저장 가능 NO3-</text>
+        <text x="1088" y="310" font-size="14" fill="#41586A" text-anchor="middle">질소수 · 기능수(오존수)</text>
+        <text x="40" y="392" font-size="13.5" fill="#6A7E8C">가스 트레인 없이 2단(플라즈마 용존 + 수중 BDDE 산화)으로 독성 NO2- 제거 · 현장 생산</text>
+      </svg>
+    </div>
+    <div class="step-row">
+      <div class="step reveal"><div class="n">1</div><h4>입력</h4><p>공기·물·잉여전력만으로 원료 조달, 별도 가스 공급 불필요.</p></div>
+      <div class="step reveal"><div class="n">2</div><h4>플라즈마 고정</h4><p>DBD/GA 방전으로 RONS 생성, 물에 NO₂⁻·NO₃⁻ 용존.</p></div>
+      <div class="step reveal"><div class="n">3</div><h4>BDDE 산화</h4><p>보론도프 다이아몬드 전극이 NO₂⁻를 NO₃⁻로 수중 전환.</p></div>
+      <div class="step reveal"><div class="n">4</div><h4>무독 질소수</h4><p>저장 가능한 순수 NO₃⁻ 기능수 — 농업·수처리에 즉시 활용.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TECH -->
+<section id="tech" style="background:var(--light);">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Core Technology & Moat</div>
+      <h2 class="section-title">경쟁사가 기상에서 할 때, 우리는 수중에서 합니다</h2>
+      <p class="section-sub">핵융합연 계열 특허는 기상(gas-phase) 산화 방식. Pearl은 수중(aqueous) BDDE 산화라는 별도 경로로 회피설계와 자유실시(FTO)를 확보했습니다.</p>
+    </div>
+    <div class="grid g3">
+      <div class="card reveal"><div class="bar"></div><h3>Zero-Nitrite 무독화</h3><p>0.2A 조건에서 아질산을 검출한계 이하로 제거. 규제 리스크를 원천 차단하는 핵심 차별점.</p></div>
+      <div class="card reveal"><div class="bar" style="background:var(--teal);"></div><h3>듀얼모드 운전</h3><p>Mode A(플라즈마+BDDE)=NO₃⁻ 영양수 / Mode B(BDDE only)=고농도 오존수. 가동률·매출 레버로 활용.</p></div>
+      <div class="card reveal"><div class="bar" style="background:var(--gold);"></div><h3>특허 · 회피설계(FTO)</h3><p>수중 BDDE 산화 경로로 기존 기상 특허를 회피, 출원 완료. 한양대 FE-DBD 기술이전으로 효율 해자 강화.</p></div>
+    </div>
+    <div class="band reveal">
+      <div class="item"><h4>≈ 0</h4><p>0.2A 조건 아질산(NO₂⁻) 잔류 — 검출한계 이하(BDL)</p></div>
+      <div class="item"><h4>200–250 ppm</h4><p>현장 생산 NO₃⁻ 질소수 농도 (5분, DBD 8W baseline)</p></div>
+      <div class="item"><h4>2-Track</h4><p>지금 RGA 상용 소스 + FE-DBD 효율 해자 개발 병행</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- BUSINESS / P2X -->
+<section id="biz">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Business Model · P2X</div>
+      <h2 class="section-title">버려질 전력을 매출로 — 프랜차이즈형 확산</h2>
+      <p class="section-sub">서남권 잉여(출력제한) 태양광은 판매되지 못한 수익 0의 전력입니다. Pearl 유닛이 이를 고부가 질소수로 전환해 발전사업자에게 새로운 매출을 만듭니다.</p>
+    </div>
+    <div class="p2x">
+      <div class="reveal">
+        <svg viewBox="0 0 1000 720" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans KR','Malgun Gothic',sans-serif">
+          <rect width="1000" height="720" fill="#fff"/>
+          <text x="500" y="48" font-size="24" font-weight="700" fill="#14315B" text-anchor="middle">P2X 부가수익 루프</text>
+          <circle cx="500" cy="380" r="92" fill="#14315B"/>
+          <text x="500" y="368" font-size="22" font-weight="700" fill="#fff" text-anchor="middle">Pearl</text>
+          <text x="500" y="396" font-size="15" fill="#9FC6E8" text-anchor="middle">현장 유닛</text>
+          <text x="500" y="416" font-size="13" fill="#C9D9E8" text-anchor="middle">플라즈마+BDDE</text>
+          <circle cx="500" cy="150" r="62" fill="#FBF3E2" stroke="#B7791B" stroke-width="2"/><circle cx="500" cy="140" r="20" fill="#B7791B"/>
+          <text x="500" y="196" font-size="15" font-weight="700" fill="#14315B" text-anchor="middle">잉여 태양광</text>
+          <circle cx="790" cy="330" r="62" fill="#E7F5EC" stroke="#2E9E5B" stroke-width="2"/>
+          <text x="790" y="325" font-size="20" font-weight="700" fill="#2E9E5B" text-anchor="middle">NO3-</text>
+          <text x="790" y="352" font-size="12" fill="#41586A" text-anchor="middle">질소수·기능수</text>
+          <text x="790" y="405" font-size="15" font-weight="700" fill="#14315B" text-anchor="middle">고부가 산물</text>
+          <circle cx="500" cy="610" r="62" fill="#E9F2FA" stroke="#2E6FB5" stroke-width="2"/>
+          <path d="M470 610 h60 M500 585 v50 M480 595 h40" stroke="#2E6FB5" stroke-width="4" stroke-linecap="round" fill="none"/>
+          <text x="500" y="662" font-size="15" font-weight="700" fill="#14315B" text-anchor="middle">농가 · 수요처</text>
+          <circle cx="210" cy="330" r="62" fill="#FBF3E2" stroke="#B7791B" stroke-width="2"/>
+          <text x="210" y="338" font-size="26" font-weight="700" fill="#B7791B" text-anchor="middle">₩+</text>
+          <text x="210" y="405" font-size="15" font-weight="700" fill="#14315B" text-anchor="middle">부가수익</text>
+          <defs><marker id="a2" markerWidth="9" markerHeight="9" refX="6" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 Z" fill="#7FA8C8"/></marker></defs>
+          <g fill="none" stroke="#7FA8C8" stroke-width="5" marker-end="url(#a2)">
+            <path d="M553 205 A 250 250 0 0 1 735 285"/><path d="M773 393 A 250 250 0 0 1 560 560"/>
+            <path d="M440 560 A 250 250 0 0 1 250 380"/><path d="M235 272 A 250 250 0 0 1 452 195"/>
+          </g>
+          <g fill="none" stroke="#B7791B" stroke-width="4" stroke-dasharray="6 5" marker-end="url(#a2)"><path d="M500 220 L500 282"/></g>
+          <text x="500" y="700" font-size="12.5" fill="#6A7E8C" text-anchor="middle">잉여전력(수익 0) → Pearl 유닛 → 질소수·기능수 → 농가 판매/절감 → 발전사업자 부가수익 (한계비용 ≈ 0)</text>
+        </svg>
+      </div>
+      <div class="reveal">
+        <h3 style="font-size:1.3rem;margin-bottom:10px;">프랜차이즈 = 자산경량 확산</h3>
+        <p style="margin-bottom:6px;">질소수는 운송이 불가능해 현장 생산이 필수이고, 유닛은 표준·소형입니다. 이 분산·표준 특성은 프랜차이즈에 최적 — 본사는 장비·소모품·로열티로 빠르게 확장합니다.</p>
+        <div class="fr-cards">
+          <div class="fr"><h4>가맹점 A · 태양광 발전사업자</h4><p>출력제한 잉여전력(수익 0)을 질소염·기능수로 전환 → 신규 매출, 한계비용 ≈ 0.</p></div>
+          <div class="fr b"><h4>가맹점 B · 영농조합·개인농</h4><p>농업용 저가 전기로 현장 질소비료 생산 → 비료비 절감 + 기능수 판매.</p></div>
+        </div>
+        <p style="margin-top:18px;font-size:.92rem;color:var(--body);"><b style="color:var(--gold);">본사 수익 스트림</b> — 가맹·장비 판매 · 전극/소모품 반복매출 · 로열티·수익셰어 · 운영·모니터링 SW.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ECONOMICS -->
+<section id="economics" style="background:var(--light);">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Techno-Economics (TEA)</div>
+      <h2 class="section-title">정직한 원가 비교 — 요소 대비 최대 0.30×</h2>
+      <p class="section-sub">Pearl 순현장원가(에너지 + CAPEX 상각×소스배수 + 전극 + O&M)를 수입 요소 풀랜디드 원가(3,870원/kg-N)와 직접 비교했습니다. 현장 생산으로 운송·유통·희석 물류비는 ≈ 0.</p>
+    </div>
+    <div class="reveal" style="overflow-x:auto;">
+      <table class="tea">
+        <thead><tr><th>플라즈마 소스</th><th>현장 원가(원/kg-N)</th><th>요소 대비</th><th>비고</th></tr></thead>
+        <tbody>
+          <tr class="hi"><td>RGA (best 0.67)</td><td>1,173</td><td class="rank">0.30×</td><td>추천 소스 · 손익분기 전력 ~47–65원/kWh</td></tr>
+          <tr><td>RGA (mid 1.4)</td><td>1,520</td><td class="rank">0.39×</td><td>계통 전력에서도 흑자</td></tr>
+          <tr><td>Microwave + Catalyst</td><td>1,545</td><td>0.40×</td><td>효율 최고, 촉매·CAPEX↑ (랩스케일)</td></tr>
+          <tr><td>Gliding Arc</td><td>2,121</td><td>0.55×</td><td>중간 성숙도</td></tr>
+          <tr><td>DBD (실측 4.9)</td><td>7,109</td><td>1.84×</td><td>잉여전력(≈0원)일 때만 흑자</td></tr>
+          <tr><td><b>수입 요소 (풀랜디드)</b></td><td><b>3,870</b></td><td>1.00× (기준)</td><td>물류·인건비가 약 44%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">가정: 잉여전력 200만 kWh/yr, 전력 10원/kWh, 기본 CAPEX placeholder. 효율값은 문헌 목표 포함(자체 실측은 DBD). RGA 실장비 CAPEX·전극 실견적으로 확정 예정. — 핵심: P2X는 현재 효율에서도 순이익(+), "요소보다 저렴"은 RGA 전환이 전제.</p>
+  </div>
+</section>
+
+<!-- MARKET -->
+<section id="market">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow" style="color:#7FD3E6;">Market & Timing</div>
+      <h2 class="section-title">지금이 진입 타이밍입니다</h2>
+      <p class="section-sub">질소비료 공급망 위기와 잉여 재생에너지 급증이 동시에 일어나는 지점 — Pearl의 P2X 모델이 두 문제를 하나로 잇습니다.</p>
+    </div>
+    <div class="mkt-grid">
+      <div class="mkt reveal"><div class="v">+80%</div><p>2026 호르무즈 봉쇄로 요소 가격 급등($850/t↑). 수입 의존 리스크가 현실화.</p></div>
+      <div class="mkt reveal"><div class="v">서남권</div><p>대규모 태양광 출력제한(curtailment)으로 버려지는 잉여전력 — 수익 0의 원료.</p></div>
+      <div class="mkt reveal"><div class="v">농업+수처리</div><p>질소수(비료 대체)와 오존수(살균·수처리) 이중 수요처로 시장 확장.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM / ROADMAP -->
+<section id="team">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Team & Roadmap</div>
+      <h2 class="section-title">기술 검증에서 상용화까지</h2>
+      <p class="section-sub">한양대 FE-DBD 기술이전 기반의 플라즈마·전기화학 전문 팀. 특허 출원을 마치고, 논문·실증·TIPS 단계로 나아갑니다.</p>
+    </div>
+    <div class="road">
+      <div class="r done"><div class="dot"></div><span class="t">DONE</span><h4>기술 검증 · 특허 출원</h4><p>Zero-Nitrite 실증, 수중 BDDE 산화 특허 출원 완료.</p></div>
+      <div class="r done"><div class="dot"></div><span class="t">NOW</span><h4>논문 · TEA 확정</h4><p>질소 물질수지·에너지효율 논문(CEJ/JHM), RGA 실견적 반영.</p></div>
+      <div class="r"><div class="dot"></div><span class="t">SEED</span><h4>파일럿 · 영업·실증</h4><p>현장 파일럿, 발전사업자·영농조합 실증, FE-DBD 개발.</p></div>
+      <div class="r"><div class="dot"></div><span class="t">NEXT</span><h4>프랜차이즈 확산</h4><p>표준 유닛 양산·가맹 확대, 소모품·로열티 반복매출.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap reveal">
+    <h2>버려질 전력을, 농업의 미래로.</h2>
+    <p>상세 IM·TEA 모델·기술 자료를 요청하시면 보내드립니다. 투자·파트너십 문의를 환영합니다.</p>
+    <div class="btns" style="justify-content:center;">
+      <a href="mailto:hysleeper4@gmail.com?subject=Pearl 투자 자료 요청" class="btn btn-primary">투자 자료 요청하기</a>
+    </div>
+    <div class="contact-box">
+      <div><div class="k">Company</div><div class="val">주식회사 펄 (Pearl Inc.)</div></div>
+      <div><div class="k">Email</div><div class="val">hysleeper4@gmail.com</div></div>
+      <div><div class="k">Tech Origin</div><div class="val">한양대 FE-DBD 기술이전</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      © 2026 주식회사 펄 (Pearl Inc.) · All rights reserved.
+      <div class="badge">본 페이지는 투자 검토 목적의 요약 자료이며, 일부 수치는 문헌 목표·가정치를 포함합니다. Confidential.</div>
+    </div>
+    <div style="text-align:right;">플라즈마 + BDDE · 무독 질소수 · P2X</div>
+  </div>
+</footer>
+
+<script>
+  // mobile nav
+  var burger=document.getElementById('burger'), nl=document.getElementById('navlinks');
+  burger.addEventListener('click',function(){ nl.classList.toggle('open'); });
+  nl.querySelectorAll('a').forEach(function(a){ a.addEventListener('click',function(){ nl.classList.remove('open'); }); });
+  // scroll reveal
+  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }); },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+</script>
+</body>
+</html>
